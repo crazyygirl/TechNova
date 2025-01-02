@@ -1,0 +1,186 @@
+body {
+  background-color: black !important;
+}
+
+/* Navbar */
+.nav-link {
+  font-size: 20px !important;
+}
+
+.bi-pencil-square {
+  color: white;
+  font-size: 18px;
+}
+
+.bi-geo-alt-fill,
+.bi-person-fill,
+.bi-cart-fill {
+  color: white;
+  font-size: 24px;
+}
+
+
+a {
+  font-size: 35px !important;
+  text-decoration: none !important;
+}
+
+/* Offcanvas */
+.offcanvas img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Modal */
+.form-control {
+  padding: 0.5rem 1rem !important; 
+}
+
+.form-control::placeholder {
+  color: #6c757d; 
+  opacity: 1;
+}
+
+.modal-header button {
+  color: white;
+}
+
+.modal-body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.modal-body span {
+  margin: 0;
+}
+
+.modal-body button,
+.modal-body input {
+  width: 80%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.modal-body button {
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.modal-body .input-group {
+  width: 90%; 
+  margin-top: 15px;
+  display: flex;
+  align-items: center; 
+
+}
+.modal-body .input-group span{
+  width: 40px;
+    height: 50px;
+    margin: 15px 0 0 40px;
+}
+
+
+.modal-body input:focus {
+  border: 1px solid green !important;
+}
+
+.modal-body h5 {
+  margin: 10px 0;
+}
+
+.modal-body h6 {
+  margin: 10px 0 0 0;
+}
+
+.modal-body a{
+  font-size: 15px !important;
+  color: rgb(25, 191, 141);
+  text-decoration: underline;
+}
+
+#LoginModalLabel input {
+  width: 90% !important;
+  text-align: center;
+}
+
+.continue {
+  background-color: rgb(25, 191, 141) !important;
+  border: 2px rgb(25, 191, 141) !important;
+}
+
+
+#LoginModalLabel p, 
+#LoginModalLabel h6, 
+input {
+  margin: 15px 0 0 0 !important;
+}
+
+/* Carousel */
+.carousel-item > img {
+  height: 80%;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-direction: row;  
+  justify-content: flex-start; 
+  color: white;
+}
+
+.carousel-items {
+  display: flex; 
+  gap: 10px; 
+  padding: 0 0 0 150px;  
+}
+
+.Category_Card {
+  height: 130px;
+  width: 130px;
+  background-color: rgb(18, 18, 52);
+  color: white;
+  border: 2px solid rgb(0, 0, 1);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  text-align: center;      
+  margin-right: 10px;   
+}
+
+/* Responsive Category Cards */
+@media (max-width: 768px) {
+  .Category_Card {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.Category_Card > img {
+  height: 50px;
+  width: 50px;
+}
+.form-check-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px; 
+}
+
+.custom-checkbox {
+  max-width: 15px !important; 
+  height: 20px !important; 
+}
+
+.form-check-label {
+  font-size: 0.9rem; 
+  margin: 10px 0 0 0; 
+}
+
+
+
