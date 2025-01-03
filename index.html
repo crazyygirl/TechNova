@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/index.css"/>
+    <link rel="stylesheet" href="/TechNova/styles/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -12,28 +12,10 @@
 </head>
 <body>
      <!-- NavBar  -->
-     <nav class="navbar navbar-dark bg-black fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand ms-3" href="#">TechNova</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-controls="mainMenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-          <form class="d-flex mx-auto" role="search">
-          <input class="form-control" type="search" placeholder="What are you looking for" aria-label="Search">
-        </form>
-          <div class="d-flex" style="margin: 0 100px 0 0;">
-          <a href="#" class="text-white me-3"><i class="bi bi-geo-alt-fill">enter location</i></a>
-          <a href="" class ="me-3" id="location_Model" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
-
-          <a href="#accountMenu" class="btn btn-dark p-0 me-3" data-bs-toggle="offcanvas" aria-controls="accountMenu">
-            <i class="bi bi-person-fill"></i>
-          </a>
-  
-  
-          <a href="#" class="text-white"><i class="bi bi-cart-fill"></i></a>
-        </div>
+      <div id="nav">
+      
       </div>
-    </nav>
+    
   
     <!-- Main Offcanvas Menu -->
     <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
@@ -67,7 +49,7 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="/TechNova/profile.html"><i class="bi bi-person-circle"></i> Profile</a></li>
           <li class="nav-item"><a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"> Address</a></li>
           <li class="nav-item"><a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF">  Orders</a></li>
           <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-heart"></i>  WishList</a></li>
@@ -93,7 +75,7 @@
             <input class="mt-4" >
   
             <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="addon-wrapping">                <i class="bi bi-crosshair"></i>
+              <span class="input-group-text" id="addon-wrapping"> <i class="bi bi-crosshair"></i>
               </span>
               <input type="text" class="form-control" placeholder="search for a location" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
@@ -117,13 +99,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>   
+          <button type="button" id="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>   
         </div>
         
-        <div class="modal-body">
+        <div class="modal-body" id="modal-body" style="display:block;">
 
           <span>  
-            <input class="mt-4 login" placeholder="Login |OR| Create Account" disabled>
+            <h5 class="mt-4" style="color: rgb(25, 191, 141);">Login OR Create Account</h5>
+
       
             <h6 class="mt-4">Please enter your Email ID or Phone number</h6>
     
@@ -141,6 +124,58 @@
   
           </span>
         </div>
+        <div class="modal-body"  id="modal-body2" style="display:none;">
+
+          <span>  
+            <h5 class="mt-4" style="color: rgb(25, 191, 141);">Create Account</h5>
+             
+    
+              <input type="text" class="" id="phonenumber"style="display:none;" placeholder="Enter your phone number">
+              <input type="text" class="" id="emailId"style="display:none;" placeholder="Enter your email">
+
+              <input type="text" class="" id="userpassword" placeholder="create password">
+              <input type="text" class="" id="confirm_password" placeholder="confirm password">
+
+
+              <div class="mb-3 form-check">
+                <span class="form-check-group">
+                  <input type="checkbox" class="form-check-input custom-checkbox" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
+                </span>
+              </div>
+              
+              <p>By continuing you agree to our <a href="">Terms of Use</a> & <a href="">Privacy Policy</a></p>
+              <br>
+              <button type="button" id = "signin2" class="continue">Continue</button>
+  
+          </span>
+        </div>
+
+        <div class="modal-body"  id="modal-body3" style="display:none;">
+
+          <span>  
+            <h6 class="mt-4"  style="display:none;" id="mobileline">OTP is sent to your registered mobile no:xxxx</h6>
+            <h6 class="mt-4" style="display:none;" id="emailline">OTP is sent to your registered email :xxxx</h6>
+
+            <h6 class="mt-4">Enter OTP</h6>
+            
+
+            <div class="otp-container">
+              <div class="otp-inputs">
+                <input type="text" maxlength="1" class="otp-input" id="otp1">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+                <input type="text" maxlength="1" class="otp-input">
+              </div>
+            </div>
+       
+              <p>By continuing you agree to our <a href="">Terms of Use</a> & <a href="">Privacy Policy</a></p>
+              <br>
+              <button type="button" id = "signin3" class="continue">Continue</button>
+  
+          </span>
+        </div>
+
 
       </div>
     </div>
@@ -149,19 +184,21 @@
 
     <!-- Category Carousel  -->
  
-
     <div id="carouselExample" class="carousel slide" style="margin: 100px 0 0 0;">
       <div class="carousel-inner">
         <div class="carousel-items ">
           <div>
             <div  class="Category_Card">
               <i class="bi bi-phone"></i>
+              <input value="mobiles"  class="categoryId"  hidden>
+
             </div>
             <h6>Mobiles</h6>
           </div>
         
           <div>
             <div  class="Category_Card">
+              <input value="airfilter"  class="categoryId"  hidden>
               <img src="https://img.icons8.com/?size=100&id=aWCuO2KFXPmC&format=png&color=FFFFFF">
 
             </div>
@@ -169,7 +206,9 @@
 
           </div>
           <div>
-            <div  class="Category_Card">
+            <div  class="Category_Card" >
+              <input value="tv" class="categoryId" hidden>
+
               <img src="https://img.icons8.com/?size=100&id=540&format=png&color=FFFFFF">
             </div>
             <h6>Televisions</h6>
@@ -177,6 +216,8 @@
           </div>
           <div>
             <div  class="Category_Card">
+              <input value="laptops"  class="categoryId"  hidden>
+
               <img src="https://img.icons8.com/?size=100&id=2884&format=png&color=FFFFFF">
             </div>
             <h6>Laptops</h6>
@@ -184,6 +225,8 @@
           </div>
           <div>
             <div  class="Category_Card">
+              <input value="Headphones"  class="categoryId"  hidden>
+
               <img src="https://img.icons8.com/?size=100&id=IfHhT5chjrfQ&format=png&color=FFFFFF">
             </div>
             <h6>Headphones</h6>
@@ -191,6 +234,8 @@
           </div>
           <div>
             <div  class="Category_Card">
+              <input value="kitchen"  class="categoryId"  hidden>
+
               <img src="https://img.icons8.com/?size=100&id=BA26pvyJ28Bg&format=png&color=FFFFFF">
             </div>
             <h6>Kitchen</h6>
@@ -198,6 +243,8 @@
           </div>
           <div>
             <div  class="Category_Card">
+              <input value="washmachine"  class="categoryId"  hidden>
+
               <img src="https://img.icons8.com/?size=100&id=YZUNmAxINZcb&format=png&color=FFFFFF">
             </div>
             <h6>Washing Machines</h6>
@@ -206,6 +253,8 @@
           </div>
           <div>
             <div  class="Category_Card">
+              <input value="geysers"  class="categoryId"  hidden>
+
               <img src="https://img.icons8.com/?size=100&id=UQUxt2V8dd0X&format=png&color=FFFFFF">
             </div>
             <h6>Geyesers</h6>
@@ -237,13 +286,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/assets/images/HP_SuperExchange_.webp" class="d-block w-100" alt="...">
+            <img src="/Technova/assets/images/HP_SuperExchange_.webp" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="/assets/images/HP_Rotating_iphone16_.webp" class="d-block w-100" alt="...">
+            <img src="/Technova/assets/images/HP_Rotating_iphone16_.webp" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="/assets/images/HP_Rotating_Macbooks.webp" class="d-block w-100" alt="...">
+            <img src="/Technova/assets/images/HP_Rotating_Macbooks.webp" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -257,47 +306,216 @@
       </div>
       </div>
 
-  
-        
+
+ 
     
  </body>
 
-  <script>
-      const geoModal = document.getElementById('location_Model')
-    const myInput = document.getElementById('myInput')
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const geoModal = document.getElementById("location_Model");
+    const myInput = document.getElementById("myInput");
+    const signin = document.getElementById("signin");
+    const signin2 = document.getElementById("signin2");
+    const signin3 = document.getElementById("signin3");
 
-    geoModal.addEventListener('shown.bs.modal', () => {
-      myInput.focus()
-  })
-  
+    const closeBtn = document.getElementById("close");
 
+    const modalBody = document.getElementById("modal-body");
+    const modalBody2 = document.getElementById("modal-body2");
+    const modalBody3 = document.getElementById("modal-body3");
+    const phoneline = document.getElementById("mobileline");
+    const emailline = document.getElementById("emailline");
+    const phonenumber = document.getElementById("phonenumber");
+    const emailId = document.getElementById("emailId");
 
-  const signin = document.getElementById('signin')
+    geoModal?.addEventListener("shown.bs.modal", () => myInput?.focus());
 
-  signin.addEventListener("click", (event) => {
-    const loginModal = document.getElementById('Login_Modal')
-    const myInput2 = document.getElementById('myInput2').value
-    fetch("https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers")
-      .then((res)=>res.json())
-      .then(Users =>{
-        user = Users.find((el,i)=>el.email==myInput2 )
-        if(user){
-          console.log(user)
+    const checkInput = (input) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^\+?\d{10,15}$/;
 
+      if (emailRegex.test(input)) return "email";
+      if (phoneRegex.test(input)) return "phone";
+      return "invalid";
+    };
+
+    const resetModals = () => {
+      modalBody.style.display = "block";
+      modalBody2.style.display = "none";
+      modalBody3.style.display = "none";
+      phoneline.style.display = "none";
+      emailline.style.display = "none";
+    };
+
+    signin?.addEventListener("click", () => {
+      const myInput2 = document.getElementById("myInput2").value.trim();
+
+      if (!myInput2) {
+        console.log("Input required");
+        return;
+      }
+
+      fetch("https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers")
+        .then((res) => res.json())
+        .then((users) => {
+          const user = users.find(
+            (u) => u.email === myInput2 || u.contact === myInput2
+          );
+
+          if (user) {
+            console.log(user);
+            modalBody.style.display = "none";
+            modalBody3.style.display = "block";
+                  
+
+                 function generateOTP(length = 4) {
+                if (length <= 0) {
+                    throw new Error("Length must be a positive integer.");
+                }
+                let otp = '';
+                for (let i = 0; i < length; i++) {
+                    otp += Math.floor(Math.random() * 10); // Generate a random digit (0-9)
+                }
+                return otp;
+            }
+
+            let  OTP= generateOTP()
+
+            if (checkInput(myInput2) === "phone") {
+              phoneline.style.display = "block";
+              // emailline.style.display = "none";
+
+              alert(OTP);
+
+            } else if (checkInput(myInput2) === "email") {
+              emailline.style.display = "block";
+              // phoneline.style.display = "none";
+
+              alert(OTP);
+
+            }
+            
+
+            signin3.addEventListener("click" , ()=>{
+                        
+                      const otpInputs = document.querySelectorAll('.otp-input');
+            let userOtp = '';
+            otpInputs.forEach(input => {
+              userOtp += input.value;
+            });
+            
+
+              if(OTP == userOtp){
+                window.location.href = "/profile.html";
+              }
+              else{
+                alert("incorrecr OTP")
+              }
+            })
+
+               
+            
+            closeBtn?.addEventListener("click", resetModals);
+          }
+           else {
+            console.log("Not An Existing User? Create Account");
+            modalBody.style.display = "none";
+            modalBody2.style.display = "block";
+
+            if (checkInput(myInput2) === "phone") {
+              emailId.style.display = "block";
+              phonenumber.value = myInput2;
+            } else if (checkInput(myInput2) === "email") {
+              phonenumber.style.display = "block";
+              emailId.value = myInput2;
+            } else {
+              console.log("Invalid input type");
+            }
+
+            signin2?.addEventListener("click", () => {
+              const user_contact = phonenumber.value.trim();
+              const user_email = emailId.value.trim();
+              const user_password = document.getElementById("userpassword").value.trim();
+
+              if (!user_email && !user_contact) {
+                console.log("Email or phone number is required.");
+                return;
+              }
+
+              if (!user_password) {
+                console.log("Password is required.");
+                return;
+              }
+
+              const UserObj = {
+                email: user_email,
+                contact: user_contact,
+                password: user_password,
+              };
+               
+              fetch("https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(UserObj),
+              })
+              .then((data) => {
+                if (data) {
+                  console.log("Response data:", data);
+                } else {
+                  console.log("No response data or non-JSON response.");
+                }
+              })
+              .catch((error) => {
+                console.error("Error during POST request:", error);
+              });
+            });
+
+            closeBtn?.addEventListener("click", resetModals);
+          }
+        })
+        .catch((err) => console.error("Error fetching users:", err));
+    });
+
+    const CategoryElement = document.getElementById("carouselExample");
+
+    CategoryElement.addEventListener("click", (event) => {
+      const Category_Card = event.target.closest('.Category_Card');
+
+      if (Category_Card) {
+        const CategoryId = Category_Card.querySelector('.categoryId')?.value;
+        console.log(CategoryId);
+
+        if (CategoryId) {
+          console.log(`https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${CategoryId}`);
+
+          // Fetch data from the server
+          fetch(`https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${CategoryId}`)
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+            .catch((err) => console.error("Error fetching data:", err));
+
+          // Redirect to another page with the CategoryId as a query parameter
+          window.location.href = `/TechNova/products_display_page.html?product_Type=${CategoryId}`;
+        } else {
+          console.error("CategoryId is not defined or null.");
         }
-        else{
-          console.log("No An Existing User")
-        }
-      }) 
-      
-    })
+      } else {
+        console.error("Category_Card is not found.");
+      }
+    });
+
+  });
+
+ 
 
 
 
-  
+</script>
 
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="/scripts/navbar.js"></script>
+  <script src="/TechNova/scripts/navbar.js" ></script>
 
  </html>
