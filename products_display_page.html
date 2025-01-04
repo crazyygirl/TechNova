@@ -11,7 +11,12 @@
         body{
             background-color: rgb(56, 54, 54)!important;
         }
-        h6,h4,p,h3{
+        h6,h4{
+          color: white;
+          margin:  50px 0 0 100px;
+        }
+        .adlaptops,
+         .adphone p,h3{
             color: white;
             margin:  10px 0 0 100px;
         }
@@ -19,13 +24,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin: 50px 0 0 0;
         }
         #Productdiv{ 
             width: 70%;
             display: grid;
             gap:15px;
             grid-template-columns: repeat(4,300px);
-
+            margin: 0 200px 0 0;
         }
         .product_type_Card{
             width: 300px;
@@ -33,9 +39,12 @@
             border-radius: 10px;
             background-color: black;
             border: 2px solid white;
-            margin: 0  0 0 0;
             text-align: center;
             
+            
+        }
+        .product_type_Card h4,p{
+          margin: 10px 0 0 0;
         }
         .product_type_Card img {
             width: 80%;
@@ -68,11 +77,12 @@
          
         </div>
       </div>
-    <div style="margin: 100px 0 0 0;">
-        <h6 id="product_type_title">Phones & WearablesMobile > Phones</h6><br>
-          <h4>Mobile Phones</h4>
+    <div style="margin: 100px 0 0 0;" id="carouselslide">
+        <!-- <h6 id="product_type_title"></h6><br> -->
+          <h4 id="product_type_title">Mobile Phones</h4>
+          <input id="product_type_id" hidden> 
            <!-- Sales Carousel  -->
-      <div class="carouselSlide" style="margin-top: 100px;">
+      <div class="carouselSlide" style="margin-top: 50px;">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
          <div class="carousel-indicators">
            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -81,13 +91,13 @@
          </div>
          <div class="carousel-inner">
            <div class="carousel-item active">
-             <img src="/Technova/assets/images/D_main-banner_hat0zq.webp" class="d-block w-100" alt="...">
+             <img src="" class="d-block w-100" alt="...">
            </div>
            <div class="carousel-item">
-             <img src="/Technova/assets/images/PCP_Mobiles_GooglePixel_2Jan2025_ckzqiq.webp" class="d-block w-100" alt="...">
+             <img src="" class="d-block w-100" alt="...">
            </div>
            <div class="carousel-item">
-             <img src="/Technova/assets/images/PCP_Mobiles_RedmiNote_2Jan2025_xtumdn.webp" class="d-block w-100" alt="...">
+             <img src=" " class="d-block w-100" alt="...">
            </div>
          </div>
          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -102,11 +112,17 @@
        </div>
 
     </div>
-    <div>
+    <div class="adphone" style="display:none;">
         <h3>Treat yourself to a new Mobile Phone
            </h3>
            <p> Experience the world at your fingertips! Work, socialise, book a ride, play games, listen to music, watch your<br> favourite shows, take a photo, or simply make a call! Buy a Mobile Phone from Croma that does it all and then <br>some.</p>
     </div>
+    <div class="adlaptops" style="display:none;">
+      <h3>Laptops That Bring Out the Best In You
+
+         </h3>
+         <p> While tablets and smartphones are still popular, most people agree that everything, from doing research for<br> an assignment to playing hardcore games, works better on a laptop. It doesn't matter what your lifestyle is,<br> there is always one for you at Croma.</p>
+  </div>
 
     <!-- Products Div--> 
     <div id="productsCatalogue">
@@ -125,23 +141,70 @@
 
         const urlParams = new URLSearchParams(window.location.search);
         const productType = urlParams.get('product_Type');
-        console.log(productType); // Outputs "mobile", "smart phones", or "mobile&tablet"
+
+                  if (productType === "mobiles") {
+            const elements = document.getElementsByClassName("adphone");
+            
+            // Loop through all matching elements
+            for (let i = 0; i < elements.length; i++) {
+              elements[i].style.display = 'block'; // Show each element
+            }
+          }
+         else if (productType === "laptops") {
+            const elements = document.getElementsByClassName("adlaptops");
+            
+            // Loop through all matching elements
+            for (let i = 0; i < elements.length; i++) {
+              elements[i].style.display = 'block'; // Show each element
+            }
+          }
+
+
+        const product_type_title = document.getElementById("product_type_title");
+        const product_type_id = document.getElementById("product_type_id");
+        product_type_id.value = `${productType}`;
+        product_type_title.innerHTML = `${productType}`;
+
+        const productTypeMappings = [
+          { folder: "mobiles", fileName: "D_main-banner_hat0zq.webp", alt: "Main Banner", type: "mobiles" },
+          { folder: "mobiles", fileName: "PCP_Mobiles_GooglePixel_2Jan2025_ckzqiq.webp", alt: "Google Pixel", type: "mobiles" },
+          { folder: "mobiles", fileName: "PCP_Mobiles_RedmiNote_2Jan2025_xtumdn.webp", alt: "Redmi Note", type: "mobiles" },
+          { folder: "laptops", fileName: "PCP_LP_NC_16May2023_wc0ksd.webp", alt: "Main Banner", type: "laptops" }
+        ];
+
+        const carouselItems = document.querySelectorAll('.carousel-inner .carousel-item');
+
+        const filteredMappings = productTypeMappings.filter(mapping => mapping.type === productType);
+
+        // Update each carousel item with the filtered mappings
+        carouselItems.forEach((carouselItem, index) => {
+          const img = carouselItem.querySelector('img'); // Find the <img> inside the carousel item
+          const mapping = filteredMappings[index]; // Get the corresponding mapping
+
+          if (mapping && img) {
+            const basePath = "/Technova/assets/images/"; // Base path for all images
+            img.src = `${basePath}${mapping.folder}/${mapping.fileName}`;
+            img.alt = mapping.alt || "Product Image"; // Optional: Add an alt text
+            console.log(`Updated img.src to: ${img.src}`);
+          } else {
+            console.warn(`No mapping found for carousel item at index ${index}`);
+          }
+        });
+
+
         const productDiv =document.getElementById("Productdiv")
 
         let productsCatalogue = document.getElementById("productsCatalogue")
                 fetch(`https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${productType}`)
             .then((res) => res.json())
             .then((ProductTypeCards) => {
-            // Select the container where product cards will be displayed
             const productDiv = document.getElementById("Productdiv");
 
-            // Check if productDiv exists
             if (!productDiv) {
                 console.error("Container for product cards (productDiv) not found.");
                 return;
             }
 
-            // Generate the product cards HTML
             const productCards = ProductTypeCards.map((product) => {
                 productTitle =product.product_Brand + " "+ product.brand_model;
                 return `
@@ -155,7 +218,6 @@
             }).join("");
             console.log(productCards)
 
-            // Insert the generated HTML into the productDiv
             productDiv.innerHTML = productCards;
 
 
