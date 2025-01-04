@@ -20,7 +20,7 @@
             width: 70%;
             display: grid;
             grid-template-columns: repeat(2,350px);
-            margin:100px  0 0 300px;
+            margin:100px  0 0 0px;
             gap:20px;
         }
         .profileCard input,select{
@@ -31,6 +31,7 @@
             background-color: black;
             border: 2px solid white;
             margin: 15px  0 0 0;
+            font-size: 20px;
 
         }
         button{
@@ -69,112 +70,387 @@
      <div id="nav">
       
      </div>
-     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="accountMenu" aria-labelledby="accountMenuLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="accountMenuLabel">Account</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="/TechNova/profile.html"><i class="bi bi-person-circle"></i> Profile</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"> Address</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF">  Orders</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-heart"></i>  WishList</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" id="Login_Modal" data-bs-toggle="modal" data-bs-target="#LoginModalLabel"><i class="bi bi-power"></i> Login</a></li>
-          </ul>
-         
+
+     <div
+     class="offcanvas offcanvas-end text-bg-dark"
+     tabindex="-1"
+     id="accountMenu"
+     aria-labelledby="accountMenuLabel"
+   >
+     <div class="offcanvas-header">
+       <h5 class="offcanvas-title" id="accountMenuLabel">Account</h5>
+       <button
+         type="button"
+         class="btn-close btn-close-white"
+         data-bs-dismiss="offcanvas"
+         aria-label="Close"
+       ></button>
+     </div>
+     <div class="offcanvas-body">
+       <ul class="navbar-nav">
+         <li class="nav-item">
+           <a
+             class="nav-link"
+             href="./profile.html"
+             ><i class="bi bi-person-circle"></i> Profile</a
+           >
+         </li>
+         <li class="nav-item">
+           <a
+             class="nav-link"
+             href="#"
+        
+             ><img
+               src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"
+             />
+             Address</a
+           >
+         </li>
+         <li class="nav-item">
+           <a
+             class="nav-link"
+             href="#"
+        
+             ><img
+               src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF"
+             />
+             Orders</a
+           >
+         </li>
+         <li class="nav-item">
+           <a
+             class="nav-link"
+             href="./wishlist.html"
+        
+             ><i class="bi bi-heart"></i> WishList</a
+           >
+         </li>
+         <li class="nav-item">
+           <a
+             class="nav-link"
+             href="#"
+             id="Logout_Modal"
+             ><i class="bi bi-power"></i> Logout</a
+           >
+         </li>
+       </ul>
+     </div>
+   </div>
+      
+
+      <div class="modal fade" id="LoginModalLabel" tabindex="-1" aria-labelledby="Login_Modal_Label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" id="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>   
+            </div>
+            
+            <div class="modal-body" id="modal-body" style="display:block;">
+    
+              <span>  
+                <h5 class="mt-4" style="color: rgb(25, 191, 141);">Login OR Create Account</h5>
+    
+          
+                <h6 class="mt-4">Please enter your Email ID or Phone number</h6>
+        
+                  <input type="text" class="" id="myInput2" placeholder="Enter your Email ID or phone number">
+                  <div class="mb-3 form-check">
+                    <span class="form-check-group">
+                      <input type="checkbox" class="form-check-input custom-checkbox" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
+                    </span>
+                  </div>
+                  
+                  <p>By continuing you agree to our <a href="">Terms of Use</a> & <a href="">Privacy Policy</a></p>
+                  <br>
+                  <button type="button" id = "signin" class="continue">Continue</button>
+      
+              </span>
+            </div>
+            <div class="modal-body"  id="modal-body2" style="display:none;">
+    
+              <span>  
+                <h5 class="mt-4" style="color: rgb(25, 191, 141);">Create Account</h5>
+                 
+        
+                  <input type="text" class="" id="phonenumber"style="display:none;" placeholder="Enter your phone number">
+                  <input type="text" class="" id="emailId"style="display:none;" placeholder="Enter your email">
+    
+                  <input type="text" class="" id="userpassword" placeholder="create password">
+                  <input type="text" class="" id="confirm_password" placeholder="confirm password">
+    
+    
+                  <div class="mb-3 form-check">
+                    <span class="form-check-group">
+                      <input type="checkbox" class="form-check-input custom-checkbox" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
+                    </span>
+                  </div>
+                  
+                  <p>By continuing you agree to our <a href="">Terms of Use</a> & <a href="">Privacy Policy</a></p>
+                  <br>
+                  <button type="button" id = "signin2" class="continue">Continue</button>
+      
+              </span>
+            </div>
+    
+            <div class="modal-body"  id="modal-body3" style="display:none;">
+    
+              <span>  
+                <h6 class="mt-4"  style="display:none;" id="mobileline">OTP is sent to your registered mobile no:xxxx</h6>
+                <h6 class="mt-4" style="display:none;" id="emailline">OTP is sent to your registered email :xxxx</h6>
+    
+                <h6 class="mt-4">Enter OTP</h6>
+                
+    
+                <div class="otp-container">
+                  <div class="otp-inputs">
+                    <input type="text" maxlength="1" class="otp-input" id="otp1">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                  </div>
+                </div>
+           
+                  <p>By continuing you agree to our <a href="">Terms of Use</a> & <a href="">Privacy Policy</a></p>
+                  <br>
+                  <button type="button" id = "signin3" class="continue">Continue</button>
+      
+              </span>
+            </div>
+    
+    
+          </div>
         </div>
       </div>
 
 
-   <div class="profilediv">
+      <div class="profilediv">
+        <form id="form">
+        <div class="profileGrid">
+        <h6>My Account > Profile Page</h6><br>
 
-    <div class="profileGrid">
-     <h6>My Account > Profile Page</h6><br>
-
-    <h3>My Profile Page</h3><br>
-
-        <div class="profileCard">
-           <label>Title</label>
-           <select>
-            <option>Mr</option>
-            <option>Mrs</option>
-            <option>Miss</option>
-            <option>MS</option>
-            <option>Dr</option>
-            <option>Prof</option>
-           
-           </select>
-        </div>
-        <div class="profileCard">
-            <label>First Name</label>
-
-            <input placeholder="name">
-        </div>
-        <div class="profileCard">
-            <label>Middle Name</label>
-            <input placeholder="name">
-        </div>   
-        <div class="profileCard">
-            <label>Last Name</label>
-
-            <input placeholder="name">
-        </div>
-        <div id="formchecks">
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                   Male
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                   Female
-                </label>
-              </div><div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Transgender
-                </label>
-              </div><div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  None
-                </label>
-              </div>
-         </div>
-         <br>
-        
-        <div class="profileCard">
-            <label>Mobile Number*</label>
-             <input placeholder="name">
-         </div>
-
-         <div class="profileCard">
-             <label>Email ID*</label>
- 
-             <input placeholder="name">
-         </div>
+        <h3>My Profile Page</h3><br>
         
 
-         <div class="profileCard">
-             <label>Date Of Birth</label>
-             <input placeholder="name">
-         </div>   
-         <div class="profileCard">
-             <label>Date Of Anniversary</label>
- 
-             <input placeholder="name">
-         </div>
-         <button  class="discard">DISCARD CHANGES</button>
-         <button class="save">SAVE CHANGES</button>
+            <div class="profileCard">
+              <label>Title</label>
+              <select id="title" value="">
+                <option>Mr</option>
+                <option>Mrs</option>
+                <option>Miss</option>
+                <option>MS</option>
+                <option>Dr</option>
+                <option>Prof</option>
+              
+              </select>
+            </div>
 
+            <div class="profileCard">
+                <label>First Name</label>
+
+                <input placeholder="First Name" id="firstname"  value="">
+            </div>
+            <div class="profileCard">
+                <label>Middle Name</label>
+                <input placeholder="Middle Name" id="middlename"  value="">
+            </div>   
+            <div class="profileCard">
+                <label>Last Name</label>
+
+                <input placeholder="Last Name" id="lastname"  value="">
+            </div>
+            <div id="formchecks">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Female
+                    </label>
+                  </div><div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Transgender
+                    </label>
+                  </div><div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      None
+                    </label>
+                  </div>
+            </div>
+            <br>
+            
+            <div class="profileCard">
+                <label>Mobile Number*</label>
+                <input placeholder="name" id="mobile_no" value="">
+            </div>
+
+            <div class="profileCard">
+                <label>Email ID*</label>
+    
+                <input placeholder="name" id="emailid"  value="">
+            </div>
+            
+
+            <div class="profileCard">
+                <label>Date Of Birth</label>
+                <input placeholder="name" id="dob"  value="">
+            </div>   
+            <div class="profileCard">
+                <label>Date Of Anniversary</label>
+    
+                <input placeholder="name" id="Anniversary"  value="">
+            </div>
+            <button  class="discard">DISCARD CHANGES</button>
+            <button class="save" type="submit">SAVE CHANGES</button>
+
+        </div>
+    </form>
     </div>
-</div>
     
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    var userID = sessionStorage.getItem("userID"); 
+        
+        let logoutButton = document.getElementById("Logout_Modal")
+        logoutButton.addEventListener("click",(event)=>{
+          logout(userID)
+        })
+ 
+
+      //   const modalBody = document.getElementById("modal-body");
+      // const modalBody2 = document.getElementById("modal-body2");
+      // const modalBody3 = document.getElementById("modal-body3");
+        // console.log(userID)
+        login(userID);
+        
+        function login(userID) {
+
+          if (userID) {
+            sessionStorage.setItem("userID", userID);
+            sessionStorage.setItem("isLoggedIn", "true");
+
+            updateUI();
+                  fetch(`https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers?id=${userID}`)
+          .then((res)=>res.json())
+          .then((UserData)=>{
+
+            if(UserData){
+              const user = UserData[0];  // Access the first user in the array
+
+            // Update form fields with user data
+            document.getElementById("title").value = user.title || '';
+            document.getElementById("firstname").value = user.firstname || '';
+            document.getElementById("middlename").value = user.middlename || '';
+            document.getElementById("lastname").value = user.lastname || '';
+            document.getElementById("mobile_no").value = user.contact || '';
+            document.getElementById("dob").value = user.DOB || '';
+            document.getElementById("emailid").value = user.email || '';
+
+            }
+
+                
+    })
+
+          } else {
+            sessionStorage.setItem("isLoggedIn", "false");
+            console.log(isLoggedIn)
+          }
+          console.log(userID)
+
+
+          }
+
+        function updateUI() {
+                const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+                const offcanvasBody = document.getElementById("offcanvas-body");
+                const offcanvas = document.getElementById("offcanvas-body1");
+
+                if (isLoggedIn === "true") {
+                
+                  console.log(isLoggedIn)
+
+               } else {
+                 
+                  console.log(isLoggedIn)
+                }
+              }
+      
+                  function updateUI() {
+                const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+                const logoutButton = document.getElementById("Logout_Modal");
+                const loginButton = document.getElementById("Logout_Modal");
+
+              }
+
+      function logout() {
+                    sessionStorage.clear();
+                    updateUI();
+                  }
+      
+
+    
+
+  })
+     
+    
+    let form = document.getElementById("form")
+
+    form.addEventListener("submit",()=>{
+      event.preventDefault()
+
+      let title = form.title.value;
+      let firstname = form.firstname.value;
+      let middlename = form.middlename.value;
+      let lastname = form.lastname.value;
+      let mobile_no = form.mobile_no.value;
+      let Anniversary = form.Anniversary.value;
+      let emaiId = form.emailid.value;
+      let dob = form.dob.value;
+    //   let name= firstname+middlename+lastname;
+      let personalDetails = {
+        title:title,
+        firstname: firstname,
+        middlename: middlename,
+        lastname: lastname,
+        contact: mobile_no,
+        Anniversary: Anniversary,
+        email:emaiId,
+        DOB:dob
+      };
+    
+      console.log(personalDetails)
+
+            fetch("https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(personalDetails)
+        })
+        .then(response => {
+            if (!response.ok) {
+            throw new Error("Network response was not ok.");
+            }
+            console.log("Successfully sent data!");
+        })
+        .catch(error => {
+            console.error("There was a problem with the fetch operation:", error);
+        });
+
+
+    })
+</script>
 <script src="/TechNova/scripts/navbar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

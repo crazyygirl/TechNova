@@ -50,6 +50,13 @@
             width: 80%;
             height: 60%;
         }
+        .product_type_Card button{
+          margin: 20px  0 0 20px;
+          background-color: rgb(1, 129, 84);
+          color: white;
+          border: 1px solid white;
+          border-radius: 10px;
+        }
        
            
      
@@ -141,6 +148,7 @@
 
         const urlParams = new URLSearchParams(window.location.search);
         const productType = urlParams.get('product_Type');
+        var userID = sessionStorage.getItem("userID"); 
 
                   if (productType === "mobiles") {
             const elements = document.getElementsByClassName("adphone");
@@ -185,7 +193,6 @@
             const basePath = "/Technova/assets/images/"; // Base path for all images
             img.src = `${basePath}${mapping.folder}/${mapping.fileName}`;
             img.alt = mapping.alt || "Product Image"; // Optional: Add an alt text
-            console.log(`Updated img.src to: ${img.src}`);
           } else {
             console.warn(`No mapping found for carousel item at index ${index}`);
           }
@@ -207,13 +214,22 @@
 
             const productCards = ProductTypeCards.map((product) => {
                 productTitle =product.product_Brand + " "+ product.brand_model;
+                console.log(product.id)
                 return `
                 <div id="productCard" class="product_type_Card">
                                 <img src="${product.image_url}">
+                                <input id="productID"  class="productID"  value="${product.id}" hidden>
+                                <input id="productType"  class="productType"  value="${product.product_Type}" hidden>
 
                     <h4>${productTitle}</h4>
                     <p>Price: ₹${product.price}</p>
+                       <div>
+                  <button id="wishBtn" class="wishBtn">Wishlist</button>
+                   <button id="cartBtn" class="cartBtn">Add to cart</button>
+
+                  </div>
                 </div>
+             
                 `;
             }).join("");
             console.log(productCards)
@@ -222,8 +238,45 @@
 
 
                     })
-            .catch((err) => console.error("Error fetching data:", err));
+            .catch((err) => console.error("Error fetching data:",   err));
         
+            productDiv.addEventListener("click",(event)=>{
+              if (event.target.classList.contains('wishBtn')) {
+                const product_Card = event.target.closest(".product_type_Card");
+              const product_type_id = product_Card.querySelector(".productID").value;
+              const product_type = product_Card.querySelector(".productType").value;
+              // console.log(product_type)
+              const wishlistObj = {
+                "product_Type" :product_type,
+                "product_type_id" :product_type_id,
+
+              };
+                                const userResponse =  fetch(
+                        `https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers?id=${userID}`
+                      );
+                      const [user] = userResponse.json(); // API returns an array, destructure the first user
+
+                      if (!user) {
+                        console.error("User not found!");
+                        return;
+                      }
+                      const updatedWishlist = [...user.wishlist, ...wishlistObj];
+
+                  fetch(`https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers?id=${userID}`,{
+
+                    
+               
+                    method:"POST",
+                    headers:{
+                      "content-type":"application/json",
+                    },
+                    body: JSON.stringify({ "wishlist": wishlistObj }),
+
+              })
+              }
+
+
+            })
       })
 
 </script>

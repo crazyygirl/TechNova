@@ -1,269 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/TechNova/styles/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/TechNova/styles/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <title>TechNova</title>
-   
-</head>
-<body>
-     <!-- NavBar  -->
-      <div id="nav">
-      
-      </div>
-    
-  
+  </head>
+  <body>
+    <!-- NavBar  -->
+    <div id="nav"></div>
+
     <!-- Main Offcanvas Menu -->
-    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="mainMenu" aria-labelledby="mainMenuLabel">
+    <div
+      class="offcanvas offcanvas-start text-bg-dark"
+      tabindex="-1"
+      id="mainMenu"
+      aria-labelledby="mainMenuLabel"
+    >
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="mainMenuLabel">Main Menu</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#">Exclusive At Croma</a></li>
-          <hr>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Exclusive At Croma</a>
+          </li>
+          <hr />
           <li class="nav-item dropdown dropend">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Top Brands</a>
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Top Brands</a
+            >
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Brand 1</a></li>
               <li><a class="dropdown-item" href="#">Brand 2</a></li>
             </ul>
           </li>
-          <hr>
-          <li class="nav-item"><a class="nav-link" href="#">Croma Store Locator</a></li>
+          <hr />
+          <li class="nav-item">
+            <a class="nav-link" href="#">Croma Store Locator</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li>
         </ul>
       </div>
     </div>
-  
+
     <!-- Account Offcanvas Menu -->
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="accountMenu" aria-labelledby="accountMenuLabel">
+    <div
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="accountMenu"
+      aria-labelledby="accountMenuLabel"
+    >
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="accountMenuLabel">Account</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
       </div>
-      <div class="offcanvas-body">
+      <div class="offcanvas-body"  id="offcanvas-body" style="display: block;">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="/TechNova/profile.html"><i class="bi bi-person-circle"></i> Profile</a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"> Address</a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF">  Orders</a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-heart"></i>  WishList</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" id="Login_Modal" data-bs-toggle="modal" data-bs-target="#LoginModalLabel"><i class="bi bi-power"></i> Login</a></li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Login_Modal"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+              ><i class="bi bi-person-circle"></i> Profile</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Login_Modal"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+              ><img
+                src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"
+              />
+              Address</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Login_Modal"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+              ><img
+                src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF"
+              />
+              Orders</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Login_Modal"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+              ><i class="bi bi-heart"></i> WishList</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Login_Modal"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+              style="display: block"
+              ><i class="bi bi-power"></i> Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Logout_Modal"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+              style="display: none"
+              ><i class="bi bi-power"></i> Logout</a
+            >
+          </li>
         </ul>
-       
+      </div>
+      <div class="offcanvas-body1" id="offcanvas-body1" style="display: none;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="./profile.html"
+         
+              ><i class="bi bi-person-circle"></i> Profile</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+         
+              ><img
+                src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"
+              />
+              Address</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+         
+              ><img
+                src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF"
+              />
+              Orders</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="./wishlist.html"
+         
+              ><i class="bi bi-heart"></i> WishList</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Logout_Modal"
+              ><i class="bi bi-power"></i> Logout</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
-  
 
-  <!--Geo Modal-->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>   
-        </div>
-        
-        <div class="modal-body">
-          <span>        
-              <h1 class="modal-title fs-5 mt-4" id="exampleModalLabel">Select your Location</h1>
-            <h6 class="mt-4">To Check Products & Delivery Options available at your location</h6>
-            <input class="mt-4" >
-  
-            <div class="input-group flex-nowrap">
-              <span class="input-group-text" id="addon-wrapping"> <i class="bi bi-crosshair"></i>
-              </span>
-              <input type="text" class="form-control" placeholder="search for a location" aria-label="Username" aria-describedby="addon-wrapping">
-            </div>
-            
+    <!--Geo Modal-->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <span>
+              <h1 class="modal-title fs-5 mt-4" id="exampleModalLabel">
+                Select your Location
+              </h1>
+              <h6 class="mt-4">
+                To Check Products & Delivery Options available at your location
+              </h6>
+              <input class="mt-4" />
+
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">
+                  <i class="bi bi-crosshair"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="search for a location"
+                  aria-label="Username"
+                  aria-describedby="addon-wrapping"
+                />
+              </div>
+
               <h5>OR</h5>
-              
-              <button type="button" class="" >sign in to select address</button>
-              <br>
+
+              <button type="button" class="">sign in to select address</button>
+              <br />
               <button type="button" class="continue">Continue</button>
-  
-          </span>
+            </span>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
 
-   <!--login Modal-->
-   
-   <div class="modal fade" id="LoginModalLabel" tabindex="-1" aria-labelledby="Login_Modal_Label" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" id="close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>   
-        </div>
-        
-        <div class="modal-body" id="modal-body" style="display:block;">
+    <!--login Modal-->
 
-          <span>  
-            <h5 class="mt-4" style="color: rgb(25, 191, 141);">Login OR Create Account</h5>
+    <div
+      class="modal fade"
+      id="LoginModalLabel"
+      tabindex="-1"
+      aria-labelledby="Login_Modal_Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              id="close"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
 
-      
-            <h6 class="mt-4">Please enter your Email ID or Phone number</h6>
-    
-              <input type="text" class="" id="myInput2" placeholder="Enter your Email ID or phone number">
+          <div class="modal-body" id="modal-body" style="display: block">
+            <span>
+              <h5 class="mt-4" style="color: rgb(25, 191, 141)">
+                Login OR Create Account
+              </h5>
+
+              <h6 class="mt-4">Please enter your Email ID or Phone number</h6>
+
+              <input
+                type="text"
+                class=""
+                id="myInput2"
+                placeholder="Enter your Email ID or phone number"
+              />
               <div class="mb-3 form-check">
                 <span class="form-check-group">
-                  <input type="checkbox" class="form-check-input custom-checkbox" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
+                  <input
+                    type="checkbox"
+                    class="form-check-input custom-checkbox"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Keep me signed in</label
+                  >
                 </span>
               </div>
-              
-              <p>By continuing you agree to our <a href="">Terms of Use</a> & <a href="">Privacy Policy</a></p>
-              <br>
-              <button type="button" id = "signin" class="continue">Continue</button>
-  
-          </span>
-        </div>
-        <div class="modal-body"  id="modal-body2" style="display:none;">
 
-          <span>  
-            <h5 class="mt-4" style="color: rgb(25, 191, 141);">Create Account</h5>
-             
-    
-              <input type="text" class="" id="phonenumber"style="display:none;" placeholder="Enter your phone number">
-              <input type="text" class="" id="emailId"style="display:none;" placeholder="Enter your email">
+              <p>
+                By continuing you agree to our <a href="">Terms of Use</a> &
+                <a href="">Privacy Policy</a>
+              </p>
+              <br />
+              <button type="button" id="signin" class="continue">
+                Continue
+              </button>
+            </span>
+          </div>
+          <div class="modal-body" id="modal-body2" style="display: none">
+            <span>
+              <h5 class="mt-4" style="color: rgb(25, 191, 141)">
+                Create Account
+              </h5>
 
-              <input type="text" class="" id="userpassword" placeholder="create password">
-              <input type="text" class="" id="confirm_password" placeholder="confirm password">
+              <input
+                type="text"
+                class=""
+                id="phonenumber"
+                style="display: none"
+                placeholder="Enter your phone number"
+              />
+              <input
+                type="text"
+                class=""
+                id="emailId"
+                style="display: none"
+                placeholder="Enter your email"
+              />
 
+              <input
+                type="text"
+                class=""
+                id="userpassword"
+                placeholder="create password"
+              />
+              <input
+                type="text"
+                class=""
+                id="confirm_password"
+                placeholder="confirm password"
+              />
 
               <div class="mb-3 form-check">
                 <span class="form-check-group">
-                  <input type="checkbox" class="form-check-input custom-checkbox" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Keep me signed in</label>
+                  <input
+                    type="checkbox"
+                    class="form-check-input custom-checkbox"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Keep me signed in</label
+                  >
                 </span>
               </div>
-              
-              <p>By continuing you agree to our <a href="">Terms of Use</a> & <a href="">Privacy Policy</a></p>
-              <br>
-              <button type="button" id = "signin2" class="continue">Continue</button>
-  
-          </span>
-        </div>
 
-        <div class="modal-body"  id="modal-body3" style="display:none;">
+              <p>
+                By continuing you agree to our <a href="">Terms of Use</a> &
+                <a href="">Privacy Policy</a>
+              </p>
+              <br />
+              <button type="button" id="signin2" class="continue">
+                Continue
+              </button>
+            </span>
+          </div>
 
-          <span>  
-            <h6 class="mt-4"  style="display:none;" id="mobileline">OTP is sent to your registered mobile no:xxxx</h6>
-            <h6 class="mt-4" style="display:none;" id="emailline">OTP is sent to your registered email :xxxx</h6>
+          <div class="modal-body" id="modal-body3" style="display: none">
+            <span>
+              <h6 class="mt-4" style="display: none" id="mobileline">
+                OTP is sent to your registered mobile no:xxxx
+              </h6>
+              <h6 class="mt-4" style="display: none" id="emailline">
+                OTP is sent to your registered email :xxxx
+              </h6>
 
-            <h6 class="mt-4">Enter OTP</h6>
-            
+              <h6 class="mt-4">Enter OTP</h6>
 
-            <div class="otp-container">
-              <div class="otp-inputs">
-                <input type="text" maxlength="1" class="otp-input" id="otp1">
-                <input type="text" maxlength="1" class="otp-input">
-                <input type="text" maxlength="1" class="otp-input">
-                <input type="text" maxlength="1" class="otp-input">
+              <div class="otp-container">
+                <div class="otp-inputs">
+                  <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-input"
+                    id="otp1"
+                  />
+                  <input type="text" maxlength="1" class="otp-input" />
+                  <input type="text" maxlength="1" class="otp-input" />
+                  <input type="text" maxlength="1" class="otp-input" />
+                </div>
               </div>
-            </div>
-       
-              <p>By continuing you agree to our <a href="">Terms of Use</a> & <a href="">Privacy Policy</a></p>
-              <br>
-              <button type="button" id = "signin3" class="continue">Continue</button>
-  
-          </span>
+
+              <p>
+                By continuing you agree to our <a href="">Terms of Use</a> &
+                <a href="">Privacy Policy</a>
+              </p>
+              <br />
+              <button type="button" id="signin3" class="continue">
+                Continue
+              </button>
+            </span>
+          </div>
         </div>
-
-
       </div>
     </div>
-  </div>
- 
 
     <!-- Category Carousel  -->
- 
-    <div id="carouselExample" class="carousel slide" style="margin: 100px 0 0 0;">
-      <div class="carousel-inner">
-        <div class="carousel-items ">
-          <div>
-            <div  class="Category_Card">
-              <i class="bi bi-phone"></i>
-              <input value="mobiles"  class="categoryId"  hidden>
 
+    <div
+      id="carouselExample"
+      class="carousel slide"
+      style="margin: 100px 0 0 0"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-items">
+          <div>
+            <div class="Category_Card">
+              <i class="bi bi-phone"></i>
+              <input value="mobiles" class="categoryId" hidden />
             </div>
             <h6>Mobiles</h6>
           </div>
-        
-          <div>
-            <div  class="Category_Card">
-              <input value="airfilter"  class="categoryId"  hidden>
-              <img src="https://img.icons8.com/?size=100&id=aWCuO2KFXPmC&format=png&color=FFFFFF">
 
+          <div>
+            <div class="Category_Card">
+              <input value="airfilter" class="categoryId" hidden />
+              <img
+                src="https://img.icons8.com/?size=100&id=aWCuO2KFXPmC&format=png&color=FFFFFF"
+              />
             </div>
             <h6>Air Purifiers</h6>
-
           </div>
           <div>
-            <div  class="Category_Card" >
-              <input value="tv" class="categoryId" hidden>
+            <div class="Category_Card">
+              <input value="tv" class="categoryId" hidden />
 
-              <img src="https://img.icons8.com/?size=100&id=540&format=png&color=FFFFFF">
+              <img
+                src="https://img.icons8.com/?size=100&id=540&format=png&color=FFFFFF"
+              />
             </div>
             <h6>Televisions</h6>
-
           </div>
           <div>
-            <div  class="Category_Card">
-              <input value="laptops"  class="categoryId"  hidden>
+            <div class="Category_Card">
+              <input value="laptops" class="categoryId" hidden />
 
-              <img src="https://img.icons8.com/?size=100&id=2884&format=png&color=FFFFFF">
+              <img
+                src="https://img.icons8.com/?size=100&id=2884&format=png&color=FFFFFF"
+              />
             </div>
             <h6>Laptops</h6>
-
           </div>
           <div>
-            <div  class="Category_Card">
-              <input value="Headphones"  class="categoryId"  hidden>
+            <div class="Category_Card">
+              <input value="Headphones" class="categoryId" hidden />
 
-              <img src="https://img.icons8.com/?size=100&id=IfHhT5chjrfQ&format=png&color=FFFFFF">
+              <img
+                src="https://img.icons8.com/?size=100&id=IfHhT5chjrfQ&format=png&color=FFFFFF"
+              />
             </div>
             <h6>Headphones</h6>
-
           </div>
           <div>
-            <div  class="Category_Card">
-              <input value="kitchen"  class="categoryId"  hidden>
+            <div class="Category_Card">
+              <input value="kitchen" class="categoryId" hidden />
 
-              <img src="https://img.icons8.com/?size=100&id=BA26pvyJ28Bg&format=png&color=FFFFFF">
+              <img
+                src="https://img.icons8.com/?size=100&id=BA26pvyJ28Bg&format=png&color=FFFFFF"
+              />
             </div>
             <h6>Kitchen</h6>
-
           </div>
           <div>
-            <div  class="Category_Card">
-              <input value="washmachine"  class="categoryId"  hidden>
+            <div class="Category_Card">
+              <input value="washmachine" class="categoryId" hidden />
 
-              <img src="https://img.icons8.com/?size=100&id=YZUNmAxINZcb&format=png&color=FFFFFF">
+              <img
+                src="https://img.icons8.com/?size=100&id=YZUNmAxINZcb&format=png&color=FFFFFF"
+              />
             </div>
             <h6>Washing Machines</h6>
-
-
           </div>
           <div>
-            <div  class="Category_Card">
-              <input value="geysers"  class="categoryId"  hidden>
+            <div class="Category_Card">
+              <input value="geysers" class="categoryId" hidden />
 
-              <img src="https://img.icons8.com/?size=100&id=UQUxt2V8dd0X&format=png&color=FFFFFF">
+              <img
+                src="https://img.icons8.com/?size=100&id=UQUxt2V8dd0X&format=png&color=FFFFFF"
+              />
             </div>
             <h6>Geyesers</h6>
-
           </div>
-          
-        
         </div>
-      
       </div>
       <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -275,247 +512,346 @@
       </button> -->
     </div>
 
-
-       <!-- Sales Carousel  -->
-      <div class="carouselSlide" style="margin-top: 50px;">
-       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <!-- Sales Carousel  -->
+    <div class="carouselSlide" style="margin-top: 50px">
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/Technova/assets/images/HP_SuperExchange_.webp" class="d-block w-100" alt="...">
+            <img
+              src="/Technova/assets/images/HP_SuperExchange_.webp"
+              class="d-block w-100"
+              alt="..."
+            />
           </div>
           <div class="carousel-item">
-            <img src="/Technova/assets/images/HP_Rotating_iphone16_.webp" class="d-block w-100" alt="...">
+            <img
+              src="/Technova/assets/images/HP_Rotating_iphone16_.webp"
+              class="d-block w-100"
+              alt="..."
+            />
           </div>
           <div class="carousel-item">
-            <img src="/Technova/assets/images/HP_Rotating_Macbooks.webp" class="d-block w-100" alt="...">
+            <img
+              src="/Technova/assets/images/HP_Rotating_Macbooks.webp"
+              class="d-block w-100"
+              alt="..."
+            />
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      </div>
+    </div>
+  </body>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const geoModal = document.getElementById("location_Model");
+      const myInput = document.getElementById("myInput");
+      const signin = document.getElementById("signin");
+      const signin2 = document.getElementById("signin2");
+      const signin3 = document.getElementById("signin3");
 
- 
-    
- </body>
+      const closeBtn = document.getElementById("close");
 
- <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const geoModal = document.getElementById("location_Model");
-    const myInput = document.getElementById("myInput");
-    const signin = document.getElementById("signin");
-    const signin2 = document.getElementById("signin2");
-    const signin3 = document.getElementById("signin3");
+      const modalBody = document.getElementById("modal-body");
+      const modalBody2 = document.getElementById("modal-body2");
+      const modalBody3 = document.getElementById("modal-body3");
+      const phoneline = document.getElementById("mobileline");
+      const emailline = document.getElementById("emailline");
+      const phonenumber = document.getElementById("phonenumber");
+      const emailId = document.getElementById("emailId");
 
-    const closeBtn = document.getElementById("close");
-
-    const modalBody = document.getElementById("modal-body");
-    const modalBody2 = document.getElementById("modal-body2");
-    const modalBody3 = document.getElementById("modal-body3");
-    const phoneline = document.getElementById("mobileline");
-    const emailline = document.getElementById("emailline");
-    const phonenumber = document.getElementById("phonenumber");
-    const emailId = document.getElementById("emailId");
-
-    geoModal?.addEventListener("shown.bs.modal", () => myInput?.focus());
-
-    const checkInput = (input) => {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const phoneRegex = /^\+?\d{10,15}$/;
-
-      if (emailRegex.test(input)) return "email";
-      if (phoneRegex.test(input)) return "phone";
-      return "invalid";
-    };
-
-    const resetModals = () => {
-      modalBody.style.display = "block";
-      modalBody2.style.display = "none";
-      modalBody3.style.display = "none";
-      phoneline.style.display = "none";
-      emailline.style.display = "none";
-    };
-
-    signin?.addEventListener("click", () => {
-      const myInput2 = document.getElementById("myInput2").value.trim();
-
-      if (!myInput2) {
-        console.log("Input required");
-        return;
+      geoModal?.addEventListener("shown.bs.modal", () => myInput?.focus());
+      var userID = sessionStorage.getItem("userID"); 
+      // const myModal = new bootstrap.Modal(document.getElementById('LoginModalLabel'));
+      // myModal.show();
+      if(userID){
+        login(userID)
       }
+      console.log(userID)
+    
+      let logoutButton = document.getElementById("Logout_Modal")
+        logoutButton.addEventListener("click",(event)=>{
+          logout(userID)
+        })
+      
 
-      fetch("https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers")
-        .then((res) => res.json())
-        .then((users) => {
-          const user = users.find(
-            (u) => u.email === myInput2 || u.contact === myInput2
-          );
+      const checkInput = (input) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\+?\d{10,15}$/;
 
-          if (user) {
-            console.log(user);
-            modalBody.style.display = "none";
-            modalBody3.style.display = "block";
-                  
+        if (emailRegex.test(input)) return "email";
+        if (phoneRegex.test(input)) return "phone";
+        return "invalid";
+      };
 
-                 function generateOTP(length = 4) {
+      const resetModals = () => {
+        modalBody.style.display = "block";
+        modalBody2.style.display = "none";
+        modalBody3.style.display = "none";
+        phoneline.style.display = "none";
+        emailline.style.display = "none";
+      };
+
+      function generateOTP(length = 4) {
                 if (length <= 0) {
-                    throw new Error("Length must be a positive integer.");
+                  throw new Error("Length must be a positive integer.");
                 }
-                let otp = '';
+                let otp = "";
                 for (let i = 0; i < length; i++) {
-                    otp += Math.floor(Math.random() * 10); // Generate a random digit (0-9)
+                  otp += Math.floor(Math.random() * 10); // Generate a random digit (0-9)
                 }
                 return otp;
-            }
-
-            let  OTP= generateOTP()
-
-            if (checkInput(myInput2) === "phone") {
-              phoneline.style.display = "block";
-              // emailline.style.display = "none";
-
-              alert(OTP);
-
-            } else if (checkInput(myInput2) === "email") {
-              emailline.style.display = "block";
-              // phoneline.style.display = "none";
-
-              alert(OTP);
-
-            }
-            
-
-            signin3.addEventListener("click" , ()=>{
-                        
-                      const otpInputs = document.querySelectorAll('.otp-input');
-            let userOtp = '';
-            otpInputs.forEach(input => {
-              userOtp += input.value;
-            });
-            
-
-              if(OTP == userOtp){
-                window.location.href = "/profile.html";
-              }
-              else{
-                alert("incorrecr OTP")
-              }
-            })
-
-               
-            
-            closeBtn?.addEventListener("click", resetModals);
-          }
-           else {
-            console.log("Not An Existing User? Create Account");
-            modalBody.style.display = "none";
-            modalBody2.style.display = "block";
-
-            if (checkInput(myInput2) === "phone") {
-              emailId.style.display = "block";
-              phonenumber.value = myInput2;
-            } else if (checkInput(myInput2) === "email") {
-              phonenumber.style.display = "block";
-              emailId.value = myInput2;
-            } else {
-              console.log("Invalid input type");
-            }
-
-            signin2?.addEventListener("click", () => {
-              const user_contact = phonenumber.value.trim();
-              const user_email = emailId.value.trim();
-              const user_password = document.getElementById("userpassword").value.trim();
-
-              if (!user_email && !user_contact) {
-                console.log("Email or phone number is required.");
-                return;
               }
 
-              if (!user_password) {
-                console.log("Password is required.");
-                return;
-              }
+      function login(userID) {
 
-              const UserObj = {
-                email: user_email,
-                contact: user_contact,
-                password: user_password,
-              };
-               
-              fetch("https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(UserObj),
-              })
-              .then((data) => {
-                if (data) {
-                  console.log("Response data:", data);
-                } else {
-                  console.log("No response data or non-JSON response.");
+                    if (userID) {
+                      sessionStorage.setItem("userID", userID);
+                      sessionStorage.setItem("isLoggedIn", "true");
+                      updateUI();
+
+                    } else {
+                      sessionStorage.setItem("isLoggedIn", "false");
+                    }
+                    console.log(userID)
+
+                    modalBody.style.display = "block";
+
+                  }
+      
+      function updateUI() {
+                const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+                const offcanvasBody = document.getElementById("offcanvas-body");
+                const offcanvas = document.getElementById("offcanvas-body1");
+
+                if (isLoggedIn === "true") {
+                  offcanvasBody.style.display = "none";
+                  offcanvas.style.display = "block";
+                  console.log(isLoggedIn)
+
+               } else {
+                  offcanvasBody.style.display = "block";
+                  offcanvas.style.display = "none";
+                  console.log(isLoggedIn)
                 }
-              })
-              .catch((error) => {
-                console.error("Error during POST request:", error);
-              });
-            });
+              }
 
-            closeBtn?.addEventListener("click", resetModals);
-          }
-        })
-        .catch((err) => console.error("Error fetching users:", err));
-    });
+      function logout() {
+                    sessionStorage.clear();
+                    updateUI();
+                  }
+      
+      signin?.addEventListener("click", () => {
+        const myInput2 = document.getElementById("myInput2").value.trim();
 
-    const CategoryElement = document.getElementById("carouselExample");
-
-    CategoryElement.addEventListener("click", (event) => {
-      const Category_Card = event.target.closest('.Category_Card');
-
-      if (Category_Card) {
-        const CategoryId = Category_Card.querySelector('.categoryId')?.value;
-        console.log(CategoryId);
-
-        if (CategoryId) {
-          console.log(`https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${CategoryId}`);
-
-          // Fetch data from the server
-          fetch(`https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${CategoryId}`)
-            .then((res) => res.json())
-            .then((data) => console.log(data))
-            .catch((err) => console.error("Error fetching data:", err));
-
-          // Redirect to another page with the CategoryId as a query parameter
-          window.location.href = `/TechNova/products_display_page.html?product_Type=${CategoryId}`;
-        } else {
-          console.error("CategoryId is not defined or null.");
+        if (!myInput2) {
+          alert("Input required");
+          return;
         }
-      } else {
-        console.error("Category_Card is not found.");
-      }
+
+        fetch("https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers")
+          .then((res) => res.json())
+          .then((users) => {
+            const user = users.find(
+              (u) => u.email === myInput2 || u.contact === myInput2
+            );
+
+            if (user) {
+              console.log(user.id);
+              const userID = user.id;
+              modalBody.style.display = "none";
+              modalBody3.style.display = "block";
+
+              let OTP = generateOTP();
+
+              if (checkInput(myInput2) === "phone") {
+                phoneline.style.display = "block";
+                // emailline.style.display = "none";
+
+                alert(OTP);
+              } else if (checkInput(myInput2) === "email") {
+                emailline.style.display = "block";
+                // phoneline.style.display = "none";
+
+                alert(OTP);
+              }
+
+              signin3.addEventListener("click", () => {
+                const otpInputs = document.querySelectorAll(".otp-input");
+                let userOtp = "";
+                otpInputs.forEach((input) => {
+                  userOtp += input.value;
+                });
+
+                if (OTP == userOtp) {
+                  // window.location.href = "/TechNova/profile.html";
+
+                 login(userID);
+                 
+             
+                  // Function to handle logout
+                 
+                  window.location.href = `/TechNova/profile.html?userID=${userID}`;
+                } else {
+                  alert("incorrecr OTP");
+                }
+              });
+
+              closeBtn?.addEventListener("click", resetModals);
+            }
+            
+          else {
+              console.log("Not An Existing User? Create Account");
+              modalBody.style.display = "none";
+              modalBody2.style.display = "block";
+
+              if (checkInput(myInput2) === "phone") {
+                emailId.style.display = "block";
+                phonenumber.value = myInput2;
+              } else if (checkInput(myInput2) === "email") {
+                phonenumber.style.display = "block";
+                emailId.value = myInput2;
+              } else {
+                console.log("Invalid input type");
+              }
+
+              signin2?.addEventListener("click", () => {
+                const user_contact = phonenumber.value.trim();
+                const user_email = emailId.value.trim();
+                const user_password = document
+                  .getElementById("userpassword")
+                  .value.trim();
+
+                if (!user_email && !user_contact) {
+                  console.log("Email or phone number is required.");
+                  return;
+                }
+
+                if (!user_password) {
+                  console.log("Password is required.");
+                  return;
+                }
+
+                const UserObj = {
+                  email: user_email,
+                  contact: user_contact,
+                  password: user_password,
+                };
+
+                fetch(
+                  "https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers",
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(UserObj),
+                  }
+                )
+                  .then((data) => {
+                    if (data) {
+                      console.log("Response data:", data);
+                    } else {
+                      console.log("No response data or non-JSON response.");
+                    }
+                  })
+                  .catch((error) => {
+                    console.error("Error during POST request:", error);
+                  });
+              });
+
+              closeBtn?.addEventListener("click", resetModals);
+            }
+          })
+          .catch((err) => console.error("Error fetching users:", err));
+      });
+
+      const CategoryElement = document.getElementById("carouselExample");
+
+      CategoryElement.addEventListener("click", (event) => {
+        const Category_Card = event.target.closest(".Category_Card");
+
+        if (Category_Card) {
+          const CategoryId = Category_Card.querySelector(".categoryId")?.value;
+          console.log(CategoryId);
+
+          if (CategoryId) {
+            console.log(
+              `https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${CategoryId}`
+            );
+
+            // Fetch data from the server
+            fetch(
+              `https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${CategoryId}`
+            )
+              .then((res) => res.json())
+              .then((data) => console.log(data))
+              .catch((err) => console.error("Error fetching data:", err));
+
+            // Redirect to another page with the CategoryId as a query parameter
+            window.location.href = `/TechNova/products_display_page.html?product_Type=${CategoryId}`;
+          } else {
+            console.error("CategoryId is not defined or null.");
+          }
+        } else {
+          console.error("Category_Card is not found.");
+        }
+      });
     });
 
-  });
-
- 
 
 
+  </script>
 
-</script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="/TechNova/scripts/navbar.js" ></script>
-
- </html>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="/TechNova/scripts/navbar.js"></script>
+</html>
