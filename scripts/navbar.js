@@ -1,7 +1,7 @@
 const navbar = () =>{
 let card = ` <nav class="navbar navbar-dark bg-black fixed-top">
           <div class="container-fluid">
-            <a class="navbar-brand ms-3" href="#">TechNova</a>
+            <a class="navbar-brand ms-3" href="./index.html">TechNova</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainMenu" aria-controls="mainMenu">
               <span class="navbar-toggler-icon"></span>
             </button>
