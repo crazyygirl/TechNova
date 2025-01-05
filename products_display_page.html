@@ -104,7 +104,7 @@
              <img src="" class="d-block w-100" alt="...">
            </div>
            <div class="carousel-item">
-             <img src=" " class="d-block w-100" alt="...">
+             <img src="" class="d-block w-100" alt="...">
            </div>
          </div>
          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -173,42 +173,48 @@
         product_type_id.value = `${productType}`;
         product_type_title.innerHTML = `${productType}`;
 
-                  const productTypeMappings = [
-            {
-              url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1736001756/Croma%20Assets/CMS/LP%20Page%20Banners/2025/Apple%20Exchange%20campaign/HP%20Rotating/HP%20Rotating/HP_Apple_3Jan2025_n2ccum.jpg",
-              alt: "Apple Exchange Campaign",
-              type: "mobiles"
-            },
-            {
-              url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1735988804/Croma%20Assets/CMS/LP%20Page%20Banners/2025/HP%20Rotating%20Banners/Jan/05012025/05%20Jan/Desktop/HP_Rotating_Vivo_05Jan2025_e4je7o.jpg",
-              alt: "Vivo Campaign",
-              type: "mobiles"
-            },
-            {
-              url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1735988804/Croma%20Assets/CMS/LP%20Page%20Banners/2025/HP%20Rotating%20Banners/Jan/05012025/05%20Jan/Desktop/HP_Rotating_Laptops_05Jan2025_fjfu2k.jpg",
-              alt: "Laptop Campaign",
-              type: "laptops"
-            }
-          ];
+              const productTypeMappings = [
+        {
+          url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1684242615/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/16-05-23/Desktop/Main%20Banner/D_main-banner_hat0zq.png?tr=w-2048",
+          alt: "Apple Exchange Campaign",
+          type: "mobiles"
+        },
+        {
+          url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1735812603/Croma%20Assets/CMS/LP%20Page%20Banners/2025/PCP%20Experiment/Mobiles/Desktop/PCP_Mobiles_GooglePixel_2Jan2025_ckzqiq.jpg?tr=w-2048",
+          alt: "Vivo Campaign",
+          type: "mobiles"
+        },
+        {
+          url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1735812603/Croma%20Assets/CMS/LP%20Page%20Banners/2025/PCP%20Experiment/Mobiles/Desktop/PCP_Mobiles_RedmiNote_2Jan2025_xtumdn.jpg?tr=w-2048",
+          alt: "Laptop Campaign",
+          type: "mobiles"
+        },
+        {
+          url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1688127795/Croma%20Assets/CMS/PCP/June%20-2023/30-06-2023/Laptop%20PCP/Desktop/Main%20Banner/PCP_LP_NC_16May2023_wc0ksd.png?tr=w-2048",
+          alt: "Laptop Campaign",
+          type: "laptops"
+        }
 
-          const carouselItems = document.querySelectorAll(".carousel-inner .carousel-item");
+      ];
 
-          const filteredMappings = productTypeMappings.filter(
-            (mapping) => mapping.type === productType
-          );
+      const carouselItems = document.querySelectorAll(".carousel-inner .carousel-item");
 
-          // Update each carousel item with the filtered mappings
-          carouselItems.forEach((carouselItem, index) => {
-            const img = carouselItem.querySelector("img"); // Find the <img> inside the carousel item
-            const mapping = filteredMappings[index]; // Get the corresponding mapping
+      const filteredMappings = productTypeMappings.filter(
+        (mapping) => mapping.type === productType
+      );
 
-            if (mapping && img) {
-              img.src = mapping.url; // Use the direct URL for the image
-              img.alt = mapping.alt || "Product Image"; // Optional: Add an alt text
-            } else {
-              console.warn(`No mapping found for carousel item at index ${index}`);
-            }
-          });
+      // Update each carousel item with the filtered mappings
+      carouselItems.forEach((carouselItem, index) => {
+        const img = carouselItem.querySelector("img"); // Find the <img> inside the carousel item
+        const mapping = filteredMappings[index]; // Get the corresponding mapping
+
+        if (mapping && img) {
+          img.src = mapping.url; // Use the direct URL for the image
+          img.alt = mapping.alt || "Product Image"; // Optional: Add an alt text
+        } else {
+          console.warn(`No mapping found for carousel item at index ${index}`);
+        }
+      });
 
 
         const productDiv =document.getElementById("Productdiv")
