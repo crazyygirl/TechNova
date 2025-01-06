@@ -1,75 +1,648 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/TechNova/styles/index.css" />
 
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    rel="stylesheet"
-     />
-     <style>
-          body{
-            background-color: rgb(56, 54, 54)!important;
-        }
-        h5{
-          color: white;
-          margin:  150px 0 0 100px;
-        }
-        h4{
-          color: white;
-          margin:  20px 0 0 100px;
-        }
-        .wishlist_div{
-         display: grid;
-         justify-content: center;
-         align-items: center;   
-        }
-        .wishlist_card{
-            width: 100%;
-            color: white;
-            border-radius: 10px;
-            background-color: black;
-            border: 1px solid rgb(224, 213, 213);
-            text-align: center;
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: rgb(56, 54, 54) !important;
+      }
+      .wishlist_card h5,
+      h4 {
+        color: white;
+        margin: 50px 0 0 10px;
+      }
+      h4 {
+        color: white;
+        margin: 20px 0 0 100px;
+      }
+      .wishlist_div {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .wishlist_card {
+        width: 100%;
+        height: 300px;
+        color: white;
+        border-radius: 10px;
+        background-color: black;
+        border: 1px solid rgb(224, 213, 213);
+        text-align: center;
+        margin: 20px 0 0 0;
+      }
+      .wishlist_card img {
+        margin: 50px 0 0 0;
+        width: 100%;
+        height: 50%;
+      }
+      .wishlist_card button {
+        margin: 50px 0 0 10px;
+        width: 150px;
+        height: 50px;
+        background-color: rgb(2, 125, 72);
+        color: white;
+        border-radius: 5px;
+      }
+      .wishlist_card .price-and-rating {
+        display: flex;
+        align-items: center;
+        margin: 50px 0 0 0;
+      }
 
-        }
-     </style>
+      .wishlist_card .product-price {
+        margin-right: 20px; /* Space between the price and the stars */
+      }
 
-</head>
-<body>
-    <div id="nav">
+      .wishlist_card .star-rating {
+        display: flex;
+        gap: 5px; /* Space between the stars */
+      }
 
-    </div>
+      .wishlist_card .star {
+        width: 40px; /* Adjust size as needed */
+        height: 40px; /* Adjust size as needed */
+        margin: 10px 0 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav"></div>
     <div>
-        <h5>Account > Wishlist</h5>
+      <h6>My Account Wishlist</h6>
+    </div>
+    <div
+      class="offcanvas offcanvas-start text-bg-dark"
+      tabindex="-1"
+      id="mainMenu"
+      aria-labelledby="mainMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mainMenuLabel">Main Menu</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Exclusive At Croma</a>
+          </li>
+          <hr />
+          <li class="nav-item dropdown dropend">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Top Brands</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Brand 1</a></li>
+              <li><a class="dropdown-item" href="#">Brand 2</a></li>
+            </ul>
+          </li>
+          <hr />
+          <li class="nav-item">
+            <a class="nav-link" href="#">Croma Store Locator</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Account Offcanvas Menu -->
+    <div
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="accountMenu"
+      aria-labelledby="accountMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="accountMenuLabel">Account</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body" id="loginBody" style="display: block">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <i class="bi bi-person-circle"></i> Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"
+              />
+              Address
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF"
+              />
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <i class="bi bi-heart"></i> WishList
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Login_Modal"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+              style="display: block"
+            >
+              <i class="bi bi-power"></i> Login
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="offcanvas-body1" id="logoutBody" style="display: none">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./profile.html"
+              ><i class="bi bi-person-circle"></i> Profile</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><img
+                src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"
+              />
+              Address</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><img
+                src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF"
+              />
+              Orders</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./wishlist.html"
+              ><i class="bi bi-heart"></i> WishList</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="Logout_Modal"
+              ><i class="bi bi-power"></i> Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="LoginModalLabel"
+      tabindex="-1"
+      aria-labelledby="Login_Modal_Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              id="close"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body" id="modal-body" style="display: block">
+            <span>
+              <h5 class="mt-4" style="color: rgb(25, 191, 141)">
+                Login OR Create Account
+              </h5>
+
+              <h6 class="mt-4">Please enter your Email ID or Phone number</h6>
+
+              <input
+                type="text"
+                class=""
+                id="myInput2"
+                placeholder="Enter your Email ID or phone number"
+              />
+              <div class="mb-3 form-check">
+                <span class="form-check-group">
+                  <input
+                    type="checkbox"
+                    class="form-check-input custom-checkbox"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Keep me signed in</label
+                  >
+                </span>
+              </div>
+
+              <p>
+                By continuing you agree to our <a href="">Terms of Use</a> &
+                <a href="">Privacy Policy</a>
+              </p>
+              <br />
+              <button type="button" id="signin" class="continue">
+                Continue
+              </button>
+            </span>
+          </div>
+          <div class="modal-body" id="modal-body2" style="display: none">
+            <span>
+              <h5 class="mt-4" style="color: rgb(25, 191, 141)">
+                Create Account
+              </h5>
+
+              <input
+                type="text"
+                class=""
+                id="phonenumber"
+                style="display: none"
+                placeholder="Enter your phone number"
+              />
+              <input
+                type="text"
+                class=""
+                id="emailId"
+                style="display: none"
+                placeholder="Enter your email"
+              />
+
+              <input
+                type="text"
+                class=""
+                id="userpassword"
+                placeholder="create password"
+              />
+              <input
+                type="text"
+                class=""
+                id="confirm_password"
+                placeholder="confirm password"
+              />
+
+              <div class="mb-3 form-check">
+                <span class="form-check-group">
+                  <input
+                    type="checkbox"
+                    class="form-check-input custom-checkbox"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Keep me signed in</label
+                  >
+                </span>
+              </div>
+
+              <p>
+                By continuing you agree to our <a href="">Terms of Use</a> &
+                <a href="">Privacy Policy</a>
+              </p>
+              <br />
+              <button type="button" id="signin2" class="continue">
+                Continue
+              </button>
+            </span>
+          </div>
+
+          <div class="modal-body" id="modal-body3" style="display: none">
+            <span>
+              <h6 class="mt-4" style="display: none" id="mobileline">
+                OTP is sent to your registered mobile no:xxxx
+              </h6>
+              <h6 class="mt-4" style="display: none" id="emailline">
+                OTP is sent to your registered email :xxxx
+              </h6>
+
+              <h6 class="mt-4">Enter OTP</h6>
+
+              <div class="otp-container">
+                <div class="otp-inputs">
+                  <input
+                    type="text"
+                    maxlength="1"
+                    class="otp-input"
+                    id="otp1"
+                  />
+                  <input type="text" maxlength="1" class="otp-input" />
+                  <input type="text" maxlength="1" class="otp-input" />
+                  <input type="text" maxlength="1" class="otp-input" />
+                </div>
+              </div>
+
+              <p>
+                By continuing you agree to our <a href="">Terms of Use</a> &
+                <a href="">Privacy Policy</a>
+              </p>
+              <br />
+              <button type="button" id="signin3" class="continue">
+                Continue
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h5>Account > Wishlist</h5>
     </div>
     <h4>My Wishlist</h4>
-    <div class="wishlist_div">
-        <div class="wishlist_card">
-    hello
+    <div class="wishlist_div" id="wishlist_div"></div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const userID = sessionStorage.getItem("userID");
+
+      console.log(userID);
+
+      if (!userID) {
+        console.error("User not logged in.");
+        return;
+      }
+      let logoutButton = document.getElementById("Logout_Modal");
+      logoutButton.addEventListener("click", (event) => {
+        logout(userID);
+        // alert("clicked")
+      });
+
+      fetchAndDisplayWishlist(userID);
+
+      // Event listener for wishlist actions
+      document
+        .getElementById("wishlist_div")
+        .addEventListener("click", (event) => {
+          if (event.target.classList.contains("removeBtn")) {
+            handleRemoveFromWishlist(event, userID);
+          } else if (event.target.classList.contains("cartBtn")) {
+            handleAddToCart(event, userID);
+          }
+        });
+    });
+    const userID = sessionStorage.getItem("userID");
+
+    login(userID);
+
+    // Login function to check user session and fetch user data
+    function login(userID) {
+      if (userID) {
+        sessionStorage.setItem("userID", userID);
+        sessionStorage.setItem("isLoggedIn", "true");
+        updateUI();
+      } else {
+        sessionStorage.setItem("isLoggedIn", "false");
+      }
+    }
+    function updateUI() {
+      const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+      const offcanvasBody = document.getElementById("loginBody");
+      const offcanvas = document.getElementById("logoutBody");
+
+      if (isLoggedIn === "true") {
+        offcanvasBody.style.display = "none";
+        offcanvas.style.display = "block";
+        // console.log(isLoggedIn)
+      } else {
+        offcanvasBody.style.display = "block";
+        offcanvas.style.display = "none";
+        console.log(isLoggedIn);
+      }
+    }
+
+    function logout() {
+      sessionStorage.clear();
+      updateUI();
+    }
+
+    // Fetch and display the user's wishlist
+    function fetchAndDisplayWishlist(userID) {
+      fetch("https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers")
+        .then((res) => res.json())
+        .then((users) => {
+          const user = users.find((user) => user.id == userID);
+
+          if (!user) {
+            alert("User not found.");
+            return;
+          }
+
+          const wishlistDiv = document.getElementById("wishlist_div");
+          if (!wishlistDiv) {
+            console.error("Wishlist container not found.");
+            return;
+          }
+
+          user.wishlist.forEach((product) => {
+            fetch(
+              `https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${product.product_Type}&id=${product.product_type_id}`
+            )
+              .then((res) => res.json())
+              .then((ProductTypeCards) => {
+                if (ProductTypeCards) {
+                  const productCards = ProductTypeCards.map((product) =>
+                    createWishlistCard(product)
+                  ).join("");
+                  wishlistDiv.innerHTML += productCards;
+                } else {
+                  alert("wishlist is empty");
+                }
+              })
+              .catch((err) => {
+                console.error("Error fetching product data:", err);
+              });
+          });
+        })
+        .catch((err) => {
+          alert("wishlist is empty");
+
+          //  console.error("Error fetching users:", err)
+        });
+    }
+
+    // Create wishlist card
+    function createWishlistCard(product) {
+      return `
+    <div id="wishlist_card" class="wishlist_card">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <img src="${product.image_url}" alt="${product.product_Brand} ${
+        product.brand_model
+      }">
+            <input id="productID" class="productID" value="${
+              product.id
+            }" hidden>
+          </div>
+          <div class="col">
+            <input id="productType" class="productType" value="${
+              product.product_Type
+            }" hidden>
+            <h5>${product.desc}</h5>
+            <div>
+              <span class="price-and-rating">
+                <h4 class="product-price"> ₹${product.price}</h4>
+                <div class="star-rating">
+                  ${createStarRating(5)}
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="col">
+            <div>
+              <button id="removeBtn" class="removeBtn">Remove</button>
+              <button id="cartBtn" class="cartBtn">Add to cart</button>
+            </div>
+          </div>
         </div>
-
+      </div>
     </div>
+  `;
+    }
 
-    
-</body>
-<script>
-    // let wishlist =document.getElementById("")
-</script>
-<script src="/TechNova/scripts/navbar.js"></script>
-<script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-crossorigin="anonymous"
-></script>
+    // Create star rating HTML
+    function createStarRating(rating) {
+      const fullStar = `<img class="star" src="https://img.icons8.com/?size=100&id=XE152RjyKPsE&format=png&color=000000">`;
+      const emptyStar = `<img class="star" src="https://img.icons8.com/?size=100&id=Cm7HB8vk6gh8&format=png&color=000000">`;
+      return fullStar.repeat(rating) + emptyStar.repeat(5 - rating);
+    }
+
+    // Handle removing an item from the wishlist
+    function handleRemoveFromWishlist(event, userID) {
+      const wishlistCard = event.target.closest(".wishlist_card");
+      const productId = wishlistCard.querySelector(".productID").value;
+
+      fetch(`https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers`)
+        .then((res) => res.json())
+        .then((users) => {
+          const user = users.find((user) => user.id == userID);
+          if (!user) {
+            console.error("User not found.");
+            return;
+          }
+
+          const updatedWishlist = user.wishlist.filter(
+            (item) => item.product_type_id !== productId
+          );
+
+          fetch(
+            `https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers/${userID}`,
+            {
+              method: "PATCH",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ wishlist: updatedWishlist }),
+            }
+          )
+            .then((res) => {
+              if (res.ok) {
+                console.log("Wishlist updated successfully!");
+                wishlistCard.remove();
+              } else {
+                console.error("Failed to update wishlist.");
+              }
+            })
+            .catch((err) => console.error("Error updating wishlist:", err));
+        })
+        .catch((err) => console.error("Error fetching users:", err));
+    }
+
+    // Handle adding an item to the cart
+    function handleAddToCart(event, userID) {
+      const wishlistCard = event.target.closest(".wishlist_card");
+      const productId = wishlistCard.querySelector(".productID").value;
+      const productType = wishlistCard.querySelector(".productType").value;
+
+      const cartObj = { product_Type: productType, product_type_id: productId };
+
+      fetch(
+        `https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers/${userID}`
+      )
+        .then((res) => res.json())
+        .then((user) => {
+          if (!user) {
+            console.error("User not found.");
+            return;
+          }
+
+          user.cartlist = user.cartlist || [];
+          user.cartlist.push(cartObj);
+
+          fetch(
+            `https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers/${userID}`,
+            {
+              method: "PATCH",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ cartlist: user.cartlist }),
+            }
+          )
+            .then((res) => {
+              if (res.ok) {
+                console.log("Cart updated successfully!");
+              } else {
+                console.error("Failed to update cart.");
+              }
+            })
+            .catch((err) => console.error("Error updating cart:", err));
+        })
+        .catch((err) => console.error("Error fetching user data:", err));
+    }
+  </script>
+  <script src="/TechNova/scripts/navbar.js"></script>
+  <!-- <script src="/TechNova/scripts/accountmenu.js"></script> -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
 </html>

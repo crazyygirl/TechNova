@@ -69,272 +69,338 @@
     </style>
   </head>
   <body>
+    <!-- Navbar -->
+
     <div id="nav"></div>
-    
+
+    <!-- Main Offcanvas Menu -->
+
     <div
-    class="offcanvas offcanvas-start text-bg-dark"
-    tabindex="-1"
-    id="mainMenu"
-    aria-labelledby="mainMenuLabel"
+      class="offcanvas offcanvas-start text-bg-dark"
+      tabindex="-1"
+      id="mainMenu"
+      aria-labelledby="mainMenuLabel"
     >
-    <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="mainMenuLabel">Main Menu</h5>
-    <button
-        type="button"
-        class="btn-close text-reset"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
-    ></button>
-    </div>
-    <div class="offcanvas-body">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-        <a class="nav-link" href="#">Exclusive At Croma</a>
-        </li>
-        <hr />
-        <li class="nav-item dropdown dropend">
-        <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            >Top Brands</a
-        >
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Brand 1</a></li>
-            <li><a class="dropdown-item" href="#">Brand 2</a></li>
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mainMenuLabel">Main Menu</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Exclusive At Croma</a>
+          </li>
+          <hr />
+          <li class="nav-item dropdown dropend">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Top Brands</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Brand 1</a></li>
+              <li><a class="dropdown-item" href="#">Brand 2</a></li>
+            </ul>
+          </li>
+          <hr />
+          <li class="nav-item">
+            <a class="nav-link" href="#">Croma Store Locator</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li>
         </ul>
-        </li>
-        <hr />
-        <li class="nav-item">
-        <a class="nav-link" href="#">Croma Store Locator</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li>
-    </ul>
-    </div>
+      </div>
     </div>
 
     <!-- Account Offcanvas Menu -->
+
     <div
-    class="offcanvas offcanvas-end text-bg-dark"
-    tabindex="-1"
-    id="accountMenu"
-    aria-labelledby="accountMenuLabel"
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="accountMenu"
+      aria-labelledby="accountMenuLabel"
     >
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="accountMenuLabel">Account</h5>
-      <button
-        type="button"
-        class="btn-close btn-close-white"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
-      ></button>
-    </div>
-    <div class="offcanvas-body" id="loginBody" style="display: block;">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModalLabel">
-            <i class="bi bi-person-circle"></i> Profile
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModalLabel">
-            <img src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF" />
-            Address
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModalLabel">
-            <img src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF" />
-            Orders
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModalLabel">
-            <i class="bi bi-heart"></i> WishList
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="Login_Modal" data-bs-toggle="modal" data-bs-target="#LoginModalLabel" style="display: block;">
-            <i class="bi bi-power"></i> Login
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="Logout_Modal" style="display: none;">
-            <i class="bi bi-power"></i> Logout
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="offcanvas-body1" id="logoutBody" style="display: none;">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="./profile.html"><i class="bi bi-person-circle"></i> Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF" /> Address</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF" /> Orders</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./wishlist.html"><i class="bi bi-heart"></i> WishList</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="Logout_Modal"><i class="bi bi-power"></i> Logout</a>
-        </li>
-      </ul>
-    </div>
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="accountMenuLabel">Account</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body" id="loginBody" style="display: block">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <i class="bi bi-person-circle"></i> Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"
+              />
+              Address
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF"
+              />
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <i class="bi bi-heart"></i> WishList
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Login_Modal"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+              style="display: block"
+            >
+              <i class="bi bi-power"></i> Login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Logout_Modal"
+              style="display: none"
+            >
+              <i class="bi bi-power"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="offcanvas-body1" id="logoutBody" style="display: none">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./profile.html"
+              ><i class="bi bi-person-circle"></i> Profile</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><img
+                src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"
+              />
+              Address</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><img
+                src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF"
+              />
+              Orders</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./wishlist.html"
+              ><i class="bi bi-heart"></i> WishList</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="Logout_Modal"
+              ><i class="bi bi-power"></i> Logout</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <div class="modal fade" id="LoginModalLabel" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+    <!--   Login Modal -->
 
+    <div
+      class="modal fade"
+      id="LoginModalLabel"
+      tabindex="-1"
+      aria-labelledby="LoginModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
-          <div class="modal-content">
+        <div class="modal-content">
           <div class="modal-header">
-              <button
+            <button
               type="button"
               id="close"
               class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
-              ></button>
+            ></button>
           </div>
-    
+
           <div class="modal-body" id="modal-body" style="display: block">
-              <span>
+            <span>
               <h5 class="mt-4" style="color: rgb(25, 191, 141)">
-                  Login OR Create Account
+                Login OR Create Account
               </h5>
-    
+
               <h6 class="mt-4">Please enter your Email ID or Phone number</h6>
-    
+
               <input
-                  type="text"
-                  class=""
-                  id="myInput2"
-                  placeholder="Enter your Email ID or phone number"
+                type="text"
+                class=""
+                id="myInput2"
+                placeholder="Enter your Email ID or phone number"
               />
               <div class="mb-3 form-check">
-                  <span class="form-check-group">
+                <span class="form-check-group">
                   <input
-                      type="checkbox"
-                      class="form-check-input custom-checkbox"
-                      id="exampleCheck1"
+                    type="checkbox"
+                    class="form-check-input custom-checkbox"
+                    id="exampleCheck1"
                   />
                   <label class="form-check-label" for="exampleCheck1"
-                      >Keep me signed in</label
+                    >Keep me signed in</label
                   >
-                  </span>
+                </span>
               </div>
-    
+
               <p>
-                  By continuing you agree to our <a href="">Terms of Use</a> &
-                  <a href="">Privacy Policy</a>
+                By continuing you agree to our <a href="">Terms of Use</a> &
+                <a href="">Privacy Policy</a>
               </p>
               <br />
               <button type="button" id="signin" class="continue">
-                  Continue
+                Continue
               </button>
-              </span>
+            </span>
           </div>
           <div class="modal-body" id="modal-body2" style="display: none">
-              <span>
+            <span>
               <h5 class="mt-4" style="color: rgb(25, 191, 141)">
-                  Create Account
+                Create Account
               </h5>
-    
+
               <input
-                  type="text"
-                  class=""
-                  id="phonenumber"
-                  style="display: none"
-                  placeholder="Enter your phone number"
+                type="text"
+                class=""
+                id="phonenumber"
+                style="display: none"
+                placeholder="Enter your phone number"
               />
               <input
-                  type="text"
-                  class=""
-                  id="emailId"
-                  style="display: none"
-                  placeholder="Enter your email"
+                type="text"
+                class=""
+                id="emailId"
+                style="display: none"
+                placeholder="Enter your email"
               />
-    
+
               <input
-                  type="text"
-                  class=""
-                  id="userpassword"
-                  placeholder="create password"
+                type="text"
+                class=""
+                id="userpassword"
+                placeholder="create password"
               />
               <input
-                  type="text"
-                  class=""
-                  id="confirm_password"
-                  placeholder="confirm password"
+                type="text"
+                class=""
+                id="confirm_password"
+                placeholder="confirm password"
               />
-    
+
               <div class="mb-3 form-check">
-                  <span class="form-check-group">
+                <span class="form-check-group">
                   <input
-                      type="checkbox"
-                      class="form-check-input custom-checkbox"
-                      id="exampleCheck1"
+                    type="checkbox"
+                    class="form-check-input custom-checkbox"
+                    id="exampleCheck1"
                   />
                   <label class="form-check-label" for="exampleCheck1"
-                      >Keep me signed in</label
+                    >Keep me signed in</label
                   >
-                  </span>
+                </span>
               </div>
-    
+
               <p>
-                  By continuing you agree to our <a href="">Terms of Use</a> &
-                  <a href="">Privacy Policy</a>
+                By continuing you agree to our <a href="">Terms of Use</a> &
+                <a href="">Privacy Policy</a>
               </p>
               <br />
               <button type="button" id="signin2" class="continue">
-                  Continue
+                Continue
               </button>
-              </span>
+            </span>
           </div>
-    
+
           <div class="modal-body" id="modal-body3" style="display: none">
-              <span>
+            <span>
               <h6 class="mt-4" style="display: none" id="mobileline">
-                  OTP is sent to your registered mobile no:xxxx
+                OTP is sent to your registered mobile no:xxxx
               </h6>
               <h6 class="mt-4" style="display: none" id="emailline">
-                  OTP is sent to your registered email :xxxx
+                OTP is sent to your registered email :xxxx
               </h6>
-    
+
               <h6 class="mt-4">Enter OTP</h6>
-    
+
               <div class="otp-container">
-                  <div class="otp-inputs">
+                <div class="otp-inputs">
                   <input
-                      type="text"
-                      maxlength="1"
-                      class="otp-input"
-                      id="otp1"
+                    type="text"
+                    maxlength="1"
+                    class="otp-input"
+                    id="otp1"
                   />
                   <input type="text" maxlength="1" class="otp-input" />
                   <input type="text" maxlength="1" class="otp-input" />
                   <input type="text" maxlength="1" class="otp-input" />
-                  </div>
+                </div>
               </div>
-    
+
               <p>
-                  By continuing you agree to our <a href="">Terms of Use</a> &
-                  <a href="">Privacy Policy</a>
+                By continuing you agree to our <a href="">Terms of Use</a> &
+                <a href="">Privacy Policy</a>
               </p>
               <br />
               <button type="button" id="signin3" class="continue">
-                  Continue
+                Continue
               </button>
-              </span>
+            </span>
           </div>
-          </div>
+        </div>
       </div>
-      </div>
+    </div>
+
+    <!-- product carousel -->
 
     <div style="margin: 100px 0 0 0" id="carouselslide">
       <!-- <h6 id="product_type_title"></h6><br> -->
@@ -401,6 +467,8 @@
         </div>
       </div>
     </div>
+
+    <!-- product ad -->
     <div class="adphone" style="display: none">
       <h3>Treat yourself to a new Mobile Phone</h3>
       <p>
@@ -410,6 +478,7 @@
         from Croma that does it all and then <br />some.
       </p>
     </div>
+
     <div class="adlaptops" style="display: none">
       <h3>Laptops That Bring Out the Best In You</h3>
       <p>
@@ -427,93 +496,111 @@
     </div>
   </body>
 
- <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  // Retrieve URL parameters and userID from session storage
-  const urlParams = new URLSearchParams(window.location.search);
-  const productType = urlParams.get("product_Type");
-  const userID = sessionStorage.getItem("userID");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productType = urlParams.get("product_Type");
+      const userID = sessionStorage.getItem("userID");
 
-  // Initialize event listeners for login/logout buttons
-  const logoutButton = document.getElementById("Logout_Modal");
-  logoutButton.addEventListener("click", () => logout(userID));
+      // Initialize event listeners for login/logout buttons
+      const logoutButton = document.getElementById("Logout_Modal");
+      logoutButton.addEventListener("click", () => logout(userID));
 
-  // Call the login function
-  login(userID);
+      login(userID);
 
-  // Main functions
-  function accountcanvas() {
-    const accountMenuCard = `...`; // Your account menu HTML
-    document.getElementById("accountcanvas").innerHTML = accountMenuCard;
-  }
+      // Main functions
 
-  function login(userID) {
-    if (userID) {
-      sessionStorage.setItem("userID", userID);
-      sessionStorage.setItem("isLoggedIn", "true");
-      updateUI();
-    } else {
-      sessionStorage.setItem("isLoggedIn", "false");
-    }
-  }
-
-  function updateUI() {
-    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
-    const offcanvasBody = document.getElementById("loginBody");
-    const offcanvasBody1 = document.getElementById("logoutBody");
-
-    if (isLoggedIn === "true") {
-      offcanvasBody.style.display = "none";
-      offcanvasBody1.style.display = "block";
-    } else {
-      offcanvasBody.style.display = "block";
-      offcanvasBody1.style.display = "none";
-    }
-  }
-
-  function logout() {
-    sessionStorage.clear();
-    updateUI();
-  }
-
-  // Handle product-specific UI updates
-  function handleProductTypeDisplay() {
-    const productTypeMappings = [
-      { url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1684242615/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/16-05-23/Desktop/Main%20Banner/D_main-banner_hat0zq.png?tr=w-2048", alt: "Apple Exchange Campaign", type: "mobiles" },
-      { url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1735812603/Croma%20Assets/CMS/LP%20Page%20Banners/2025/PCP%20Experiment/Mobiles/Desktop/PCP_Mobiles_GooglePixel_2Jan2025_ckzqiq.jpg?tr=w-2048", alt: "Vivo Campaign", type: "mobiles" },
-      { url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1735812603/Croma%20Assets/CMS/LP%20Page%20Banners/2025/PCP%20Experiment/Mobiles/Desktop/PCP_Mobiles_RedmiNote_2Jan2025_xtumdn.jpg?tr=w-2048", alt: "Laptop Campaign", type: "laptops" },
-      { url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1688127795/Croma%20Assets/CMS/PCP/June%20-2023/30-06-2023/Laptop%20PCP/Desktop/Main%20Banner/PCP_LP_NC_16May2023_wc0ksd.png?tr=w-2048", alt: "Laptop Campaign", type: "laptops" }
-    ];
-
-    // Update product type title and ID
-    const product_type_title = document.getElementById("product_type_title");
-    const product_type_id = document.getElementById("product_type_id");
-    product_type_id.value = productType;
-    product_type_title.innerHTML = productType;
-
-    // Filter mappings based on product type
-    const filteredMappings = productTypeMappings.filter(mapping => mapping.type === productType);
-
-    // Update carousel images based on filtered mappings
-    const carouselItems = document.querySelectorAll(".carousel-inner .carousel-item");
-    carouselItems.forEach((carouselItem, index) => {
-      const img = carouselItem.querySelector("img");
-      const mapping = filteredMappings[index];
-      if (mapping && img) {
-        img.src = mapping.url;
-        img.alt = mapping.alt || "Product Image";
+      function login(userID) {
+        if (userID) {
+          sessionStorage.setItem("userID", userID);
+          sessionStorage.setItem("isLoggedIn", "true");
+          updateUI();
+        } else {
+          sessionStorage.setItem("isLoggedIn", "false");
+        }
       }
-    });
-  }
 
-  function fetchProductData() {
-    fetch(`https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${productType}`)
-      .then((res) => res.json())
-      .then((ProductTypeCards) => {
-        const productDiv = document.getElementById("Productdiv");
-        if (!productDiv) return;
+      function updateUI() {
+        const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+        const offcanvasBody = document.getElementById("loginBody");
+        const offcanvasBody1 = document.getElementById("logoutBody");
 
-        const productCards = ProductTypeCards.map(product => `
+        if (isLoggedIn === "true") {
+          offcanvasBody.style.display = "none";
+          offcanvasBody1.style.display = "block";
+        } else {
+          offcanvasBody.style.display = "block";
+          offcanvasBody1.style.display = "none";
+        }
+      }
+
+      function logout() {
+        sessionStorage.clear();
+        updateUI();
+      }
+
+      // Handle product-specific UI updates
+      function handleProductTypeDisplay() {
+        const productTypeMappings = [
+          {
+            url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1684242615/Croma%20Assets/CMS/CAtegory/Mobile%20phone%20-%20C10/16-05-23/Desktop/Main%20Banner/D_main-banner_hat0zq.png?tr=w-2048",
+            alt: "Apple Exchange Campaign",
+            type: "mobiles",
+          },
+          {
+            url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1735812603/Croma%20Assets/CMS/LP%20Page%20Banners/2025/PCP%20Experiment/Mobiles/Desktop/PCP_Mobiles_GooglePixel_2Jan2025_ckzqiq.jpg?tr=w-2048",
+            alt: "Vivo Campaign",
+            type: "mobiles",
+          },
+          {
+            url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1735812603/Croma%20Assets/CMS/LP%20Page%20Banners/2025/PCP%20Experiment/Mobiles/Desktop/PCP_Mobiles_RedmiNote_2Jan2025_xtumdn.jpg?tr=w-2048",
+            alt: "Laptop Campaign",
+            type: "laptops",
+          },
+          {
+            url: "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1688127795/Croma%20Assets/CMS/PCP/June%20-2023/30-06-2023/Laptop%20PCP/Desktop/Main%20Banner/PCP_LP_NC_16May2023_wc0ksd.png?tr=w-2048",
+            alt: "Laptop Campaign",
+            type: "laptops",
+          },
+        ];
+
+        // Update product type title and ID
+        const product_type_title =
+          document.getElementById("product_type_title");
+        const product_type_id = document.getElementById("product_type_id");
+        product_type_id.value = productType;
+        product_type_title.innerHTML = productType;
+
+        // Filter mappings based on product type
+        const filteredMappings = productTypeMappings.filter(
+          (mapping) => mapping.type === productType
+        );
+
+        // Update carousel images based on filtered mappings
+        const carouselItems = document.querySelectorAll(
+          ".carousel-inner .carousel-item"
+        );
+        carouselItems.forEach((carouselItem, index) => {
+          const img = carouselItem.querySelector("img");
+          const mapping = filteredMappings[index];
+          if (mapping && img) {
+            img.src = mapping.url;
+            img.alt = mapping.alt || "Product Image";
+          }
+        });
+      }
+
+      function fetchProductData() {
+        fetch(
+          `https://gregarious-dolomite-explanation.glitch.me/category_Products?product_Type=${productType}`
+        )
+          .then((res) => res.json())
+          .then((ProductTypeCards) => {
+            const productDiv = document.getElementById("Productdiv");
+            if (!productDiv) return;
+
+            const productCards = ProductTypeCards.map(
+              (product) => `
           <div class="product_type_Card">
             <img src="${product.image_url}" />
             <input class="productID" value="${product.id}" hidden />
@@ -525,54 +612,64 @@
               <button class="cartBtn">Add to cart</button>
             </div>
           </div>
-        `).join("");
+        `
+            ).join("");
 
-        productDiv.innerHTML = productCards;
-        addWishlistEventListener();
-      })
-      .catch((err) => console.error("Error fetching data:", err));
-  }
-
-  function addWishlistEventListener() {
-    const productDiv = document.getElementById("Productdiv");
-    productDiv.addEventListener("click", (event) => {
-      if (event.target.classList.contains("wishBtn")) {
-        const productCard = event.target.closest(".product_type_Card");
-        const productID = productCard.querySelector(".productID").value;
-        const productType = productCard.querySelector(".productType").value;
-        const wishlistObj = { product_Type: productType, product_type_id: productID };
-
-        fetch(`https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers?id=${userID}`)
-          .then((response) => response.json())
-          .then((userData) => {
-            if (userData && userData.length > 0) {
-              const user = userData[0];
-              user.wishlist.push(wishlistObj);
-              updateUserWishlist(user);
-            }
+            productDiv.innerHTML = productCards;
+            addWishlistEventListener();
           })
-          .catch((error) => console.error("Error fetching user data:", error));
+          .catch((err) => console.error("Error fetching data:", err));
       }
+
+      function addWishlistEventListener() {
+        const productDiv = document.getElementById("Productdiv");
+        productDiv.addEventListener("click", (event) => {
+          if (event.target.classList.contains("wishBtn")) {
+            const productCard = event.target.closest(".product_type_Card");
+            const productID = productCard.querySelector(".productID").value;
+            const productType = productCard.querySelector(".productType").value;
+            const wishlistObj = {
+              product_Type: productType,
+              product_type_id: productID,
+            };
+
+            fetch(
+              `https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers?id=${userID}`
+            )
+              .then((response) => response.json())
+              .then((userData) => {
+                if (userData && userData.length > 0) {
+                  const user = userData[0];
+                  user.wishlist.push(wishlistObj);
+                  updateUserWishlist(user);
+                }
+              })
+              .catch((error) =>
+                console.error("Error fetching user data:", error)
+              );
+          }
+        });
+      }
+
+      function updateUserWishlist(user) {
+        fetch(
+          `https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers/${userID}`,
+          {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ wishlist: user.wishlist }),
+          }
+        )
+          .then((res) => res.json())
+          .then(() => console.log("Wishlist updated successfully"))
+          .catch((error) => console.error("Error updating wishlist:", error));
+      }
+
+      // Execute functions
+      handleProductTypeDisplay();
+      fetchProductData();
     });
-  }
-
-  function updateUserWishlist(user) {
-    fetch(`https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers/${userID}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ wishlist: user.wishlist }),
-    })
-      .then((res) => res.json())
-      .then(() => console.log("Wishlist updated successfully"))
-      .catch((error) => console.error("Error updating wishlist:", error));
-  }
-
-  // Execute functions
-  handleProductTypeDisplay();
-  fetchProductData();
-});
-
- </script>
+  </script>
   <script src="/TechNova/scripts/navbar.js"></script>
   <!-- <script src="/TechNova/scripts/accountmenu.js"></script> -->
 

@@ -102,123 +102,167 @@
   <body>
     <div id="nav"></div>
 
+    <!-- main Offcanvas Menu -->
     <div
-    class="offcanvas offcanvas-start text-bg-dark"
-    tabindex="-1"
-    id="mainMenu"
-    aria-labelledby="mainMenuLabel"
+      class="offcanvas offcanvas-start text-bg-dark"
+      tabindex="-1"
+      id="mainMenu"
+      aria-labelledby="mainMenuLabel"
     >
-    <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="mainMenuLabel">Main Menu</h5>
-    <button
-        type="button"
-        class="btn-close text-reset"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
-    ></button>
-    </div>
-    <div class="offcanvas-body">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-        <a class="nav-link" href="#">Exclusive At Croma</a>
-        </li>
-        <hr />
-        <li class="nav-item dropdown dropend">
-        <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            >Top Brands</a
-        >
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Brand 1</a></li>
-            <li><a class="dropdown-item" href="#">Brand 2</a></li>
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mainMenuLabel">Main Menu</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Exclusive At Croma</a>
+          </li>
+          <hr />
+          <li class="nav-item dropdown dropend">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Top Brands</a
+            >
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Brand 1</a></li>
+              <li><a class="dropdown-item" href="#">Brand 2</a></li>
+            </ul>
+          </li>
+          <hr />
+          <li class="nav-item">
+            <a class="nav-link" href="#">Croma Store Locator</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li>
         </ul>
-        </li>
-        <hr />
-        <li class="nav-item">
-        <a class="nav-link" href="#">Croma Store Locator</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#">Gift Card</a></li>
-    </ul>
-    </div>
+      </div>
     </div>
 
     <!-- Account Offcanvas Menu -->
     <div
-    class="offcanvas offcanvas-end text-bg-dark"
-    tabindex="-1"
-    id="accountMenu"
-    aria-labelledby="accountMenuLabel"
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="accountMenu"
+      aria-labelledby="accountMenuLabel"
     >
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="accountMenuLabel">Account</h5>
-      <button
-        type="button"
-        class="btn-close btn-close-white"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
-      ></button>
-    </div>
-    <div class="offcanvas-body" id="loginBody" style="display: block;">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModalLabel">
-            <i class="bi bi-person-circle"></i> Profile
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModalLabel">
-            <img src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF" />
-            Address
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModalLabel">
-            <img src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF" />
-            Orders
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#LoginModalLabel">
-            <i class="bi bi-heart"></i> WishList
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="Login_Modal" data-bs-toggle="modal" data-bs-target="#LoginModalLabel" style="display: block;">
-            <i class="bi bi-power"></i> Login
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="Logout_Modal" style="display: none;">
-            <i class="bi bi-power"></i> Logout
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="offcanvas-body1" id="logoutBody" style="display: none;">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="./profile.html"><i class="bi bi-person-circle"></i> Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF" /> Address</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><img src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF" /> Orders</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./wishlist.html"><i class="bi bi-heart"></i> WishList</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" id="Logout_Modal"><i class="bi bi-power"></i> Logout</a>
-        </li>
-      </ul>
-    </div>
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="accountMenuLabel">Account</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body" id="loginBody" style="display: block">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <i class="bi bi-person-circle"></i> Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"
+              />
+              Address
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <img
+                src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF"
+              />
+              Orders
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+            >
+              <i class="bi bi-heart"></i> WishList
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              id="Login_Modal"
+              data-bs-toggle="modal"
+              data-bs-target="#LoginModalLabel"
+              style="display: block"
+            >
+              <i class="bi bi-power"></i> Login
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="offcanvas-body1" id="logoutBody" style="display: none">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./profile.html"
+              ><i class="bi bi-person-circle"></i> Profile</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><img
+                src="https://img.icons8.com/?size=100&id=14312&format=png&color=FFFFFF"
+              />
+              Address</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><img
+                src="https://img.icons8.com/?size=100&id=nmdLxlZq4cQi&format=png&color=FFFFFF"
+              />
+              Orders</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./wishlist.html"
+              ><i class="bi bi-heart"></i> WishList</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="Logout_Modal"
+              ><i class="bi bi-power"></i> Logout</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
 
+    <!-- Login Modal -->
     <div
       class="modal fade"
       id="LoginModalLabel"
@@ -408,51 +452,55 @@
       const userID = sessionStorage.getItem("userID");
 
       if (!userID) {
-        console.error("User not logged in.");
+        alert("User not logged in.");
         return;
       }
+      const modalBody = document.getElementById("modal-body");
+      const modalBody2 = document.getElementById("modal-body2");
+      const modalBody3 = document.getElementById("modal-body3");
 
       login(userID);
 
-// Login function to check user session and fetch user data
-function login(userID) {
+      let logoutButton = document.getElementById("Logout_Modal");
+      logoutButton.addEventListener("click", (event) => {
+        logout(userID);
+        // alert("clicked")
+      });
 
-if (userID) {
-sessionStorage.setItem("userID", userID);
-sessionStorage.setItem("isLoggedIn", "true");
-updateUI();
+      function login(userID) {
+        if (userID) {
+          sessionStorage.setItem("userID", userID);
+          sessionStorage.setItem("isLoggedIn", "true");
+          updateUI();
+        } else {
+          sessionStorage.setItem("isLoggedIn", "false");
+        }
+        // console.log(userID)
 
-} else {
-sessionStorage.setItem("isLoggedIn", "false");
-}
-// console.log(userID)
+        modalBody.style.display = "block";
+      }
 
-modalBody.style.display = "block";
+      function updateUI() {
+        const isLoggedIn = sessionStorage.getItem("isLoggedIn");
 
-}
+        const offcanvasBody = document.getElementById("loginBody");
+        const offcanvas = document.getElementById("logoutBody");
 
-    function updateUI() {
-    const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+        if (isLoggedIn === "true") {
+          offcanvasBody.style.display = "none";
+          offcanvas.style.display = "block";
+          // console.log(isLoggedIn)
+        } else {
+          offcanvasBody.style.display = "block";
+          offcanvas.style.display = "none";
+          // console.log(isLoggedIn);
+        }
+      }
 
-    const offcanvasBody = document.getElementById("loginBody");
-    const offcanvas = document.getElementById("logoutBody");
-
-    if (isLoggedIn === "true") {
-    offcanvasBody.style.display = "none";
-    offcanvas.style.display = "block";
-    // console.log(isLoggedIn)
-
-    } else {
-    offcanvasBody.style.display = "block";
-    offcanvas.style.display = "none";
-    console.log(isLoggedIn)
-    }
-    }
-
-    function logout() {
-    sessionStorage.clear();
-    updateUI();
-    }
+      function logout() {
+        sessionStorage.clear();
+        updateUI();
+      }
 
       fetchAndDisplayCart(userID);
 
@@ -462,21 +510,19 @@ modalBody.style.display = "block";
         .addEventListener("click", handleCartActions);
     });
 
-    // Setup logout functionality
-  
-
-    // Update UI based on login state
-   
     // Fetch and display user's cart items
     function fetchAndDisplayCart(userID) {
       fetch("https://gregarious-dolomite-explanation.glitch.me/TechNovaUsers")
         .then((res) => res.json())
         .then((users) => {
-          const user = users.find((user) => user.id === userID);
+          const user = users.find((user) => user.id == userID);
           if (user) {
+            console.log(user);
             displayCartItems(user.cartlist);
           } else {
-            console.error("User not found.");
+            console.log(user);
+
+            alert("User cart is empty.");
           }
         })
         .catch((err) => console.error("Error fetching users:", err));
@@ -548,6 +594,8 @@ modalBody.style.display = "block";
 
     // Handle removing an item from the cart
     function handleRemoveFromCart(event) {
+      const userID = sessionStorage.getItem("userID");
+
       const productId = event.target
         .closest(".cartlist_card")
         .querySelector(".productID").value;
@@ -594,10 +642,10 @@ modalBody.style.display = "block";
         })
         .then((res) => {
           if (res.ok) {
-            console.log("Cart updated successfully!");
+            alert("Cart updated successfully!");
             if (onSuccess) onSuccess();
           } else {
-            console.error("Failed to update cart.");
+            alert("Failed to update cart.");
           }
         })
         .catch((err) => console.error("Error updating cart:", err));

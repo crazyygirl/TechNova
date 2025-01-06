@@ -17,7 +17,7 @@ let card = ` <nav class="navbar navbar-dark bg-black fixed-top">
               </a>
       
       
-              <a href="#" class="text-white"><i class="bi bi-cart-fill"></i></a>
+              <a href="./cart.html" class="text-white"><i class="bi bi-cart-fill"></i></a>
             </div>
           </div>
         </nav>`;
